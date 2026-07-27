@@ -821,7 +821,7 @@ a {
 
 .notice-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-left: 1px solid var(--line);
 }
 

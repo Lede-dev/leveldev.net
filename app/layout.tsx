@@ -14,13 +14,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://leveldev-studio-home.lede-7716.chatgpt.site"),
-  title: "LevelDev — We Build Worlds",
+  title: "LevelDev Studio — 마인크래프트 콘텐츠 & 게임 개발",
   description:
-    "게임과 가상 공간을 만드는 인터랙티브 콘텐츠 스튜디오 LevelDev입니다.",
+    "마인크래프트 맵, 플러그인·서버, 유튜브 콘텐츠와 독립 게임을 만드는 크리에이티브 스튜디오 LevelDev입니다.",
+  keywords: [
+    "마인크래프트",
+    "마인크래프트 맵 제작",
+    "플러그인 개발",
+    "게임 개발",
+    "유튜브 콘텐츠",
+    "LevelDev",
+  ],
   openGraph: {
-    title: "LevelDev — We Build Worlds",
+    title: "LevelDev Studio — We Build Worlds",
     description:
-      "아이디어를 몰입할 수 있는 게임과 가상 공간으로 만드는 인터랙티브 콘텐츠 스튜디오.",
+      "마인크래프트 콘텐츠 제작부터 게임 개발까지, 픽셀 하나하나 세계를 만드는 크리에이티브 스튜디오.",
     type: "website",
     locale: "ko_KR",
     images: [
@@ -28,15 +36,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1733,
         height: 908,
-        alt: "LevelDev — We Build Worlds",
+        alt: "LevelDev Studio — Minecraft Content Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LevelDev — We Build Worlds",
+    title: "LevelDev Studio — We Build Worlds",
     description:
-      "아이디어를 몰입할 수 있는 게임과 가상 공간으로 만드는 인터랙티브 콘텐츠 스튜디오.",
+      "마인크래프트 콘텐츠 제작부터 게임 개발까지, 픽셀 하나하나 세계를 만드는 크리에이티브 스튜디오.",
     images: ["/og.png"],
   },
 };
