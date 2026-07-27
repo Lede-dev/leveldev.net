@@ -408,64 +408,74 @@ export default function Home() {
       </section>
 
       <section className="contact section" id="contact">
-        <div className="container contact-grid">
-          <div>
-            <p className="eyebrow">CONTACT</p>
-            <h2 className="display-title">
-              필요한 콘텐츠를
-              <br />
-              <span>함께 만듭니다</span>
-            </h2>
-            <p className="section-copy">
-              콘텐츠 기획부터 제작, 기술 개발, 운영까지 필요한 범위를 함께
-              설계합니다. 프로젝트의 목표와 현재 고민을 들려주세요.
-            </p>
-            <div className="contact-points">
-              {[
-                ["01", "기획", "아이디어·타깃·콘텐츠 구조 설계"],
-                ["02", "제작", "디자인·개발·프로덕션 실행"],
-                ["03", "운영", "출시·라이브 운영·지속 개선"],
-              ].map(([no, title, desc]) => (
-                <div key={no}>
-                  <span>{no}</span>
-                  <p>
-                    <strong>{title}</strong>
-                    {desc}
-                  </p>
-                  <b>→</b>
-                </div>
-              ))}
+        <div className="container">
+          <div className="contact-intro">
+            <div>
+              <p className="eyebrow">CONTACT</p>
+              <h2 className="display-title">
+                필요한 콘텐츠를
+                <br />
+                <span>함께 만듭니다</span>
+              </h2>
+            </div>
+            <div className="contact-brief">
+              <p>
+                콘텐츠 기획부터 제작, 기술 개발과 운영까지 프로젝트에 필요한
+                범위를 함께 설계합니다. 목표와 현재 고민만 들려주세요.
+              </p>
+              <div className="contact-actions">
+                <a
+                  className="button button-primary"
+                  href="mailto:contact@leveldev.net?subject=LevelDev%20Project%20Inquiry"
+                >
+                  프로젝트 문의하기 <span>↗</span>
+                </a>
+                <a className="contact-email" href="mailto:contact@leveldev.net">
+                  contact@leveldev.net
+                </a>
+              </div>
             </div>
           </div>
-          <aside className="contact-card">
-            <div className="contact-glow" aria-hidden="true" />
-            <div className="contact-icon">⌁</div>
-            <p>NOW HIRING</p>
-            <h3>팀에 합류하세요</h3>
-            <p>
-              LevelDev와 함께 콘텐츠를 만들 기획자, 개발자, 디자이너, 크리에이터를
-              찾습니다. 결과만큼 만드는 과정과 협업을 중요하게 생각합니다.
-            </p>
-            <ul>
-              <li>
-                <span>콘텐츠 기획자</span>
-                <strong>모집 중</strong>
-              </li>
-              <li>
-                <span>인터랙티브 개발자</span>
-                <strong>모집 중</strong>
-              </li>
-              <li>
-                <span>콘텐츠 디자이너</span>
-                <strong>모집 중</strong>
-              </li>
-              <li>
-                <span>영상 편집자</span>
-                <strong>모집 중</strong>
-              </li>
+
+          <div className="contact-flow" aria-label="프로젝트 진행 과정">
+            {[
+              ["01", "이야기를 듣습니다", "아이디어와 목표, 타깃, 일정, 현재 고민을 확인합니다."],
+              ["02", "범위를 설계합니다", "기획·디자인·개발·운영에서 필요한 역할과 방향을 제안합니다."],
+              ["03", "함께 실행합니다", "제작과 출시부터 라이브 운영, 이후 개선까지 연결합니다."],
+            ].map(([no, title, desc]) => (
+              <div key={no}>
+                <span>{no}</span>
+                <div>
+                  <strong>{title}</strong>
+                  <p>{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <aside className="recruitment-strip">
+            <div className="recruitment-copy">
+              <p>JOIN LEVELDEV</p>
+              <h3>함께 만들 동료를 찾습니다</h3>
+              <span>
+                결과만큼 만드는 과정과 협업을 중요하게 생각하는 분을 기다립니다.
+              </span>
+            </div>
+            <ul className="recruitment-roles" aria-label="채용 분야">
+              {["콘텐츠 기획", "인터랙티브 개발", "콘텐츠 디자인", "영상 제작"].map(
+                (role) => (
+                  <li key={role}>
+                    <i aria-hidden="true" />
+                    {role}
+                  </li>
+                ),
+              )}
             </ul>
-            <a className="button button-primary contact-button" href="mailto:contact@leveldev.net">
-              지원 메일 보내기 <span>↗</span>
+            <a
+              className="recruitment-link"
+              href="mailto:contact@leveldev.net?subject=LevelDev%20Career%20Inquiry"
+            >
+              채용 문의 <span>↗</span>
             </a>
           </aside>
         </div>
