@@ -378,9 +378,11 @@ export default function Home() {
 
       <section className="services section" id="services">
         <div className="container">
-          <div className="section-heading centered">
-            <p className="eyebrow">SERVICES</p>
-            <h2>우리가 하는 일</h2>
+          <div className="section-heading services-heading">
+            <div className="services-heading-title">
+              <p className="eyebrow">SERVICES</p>
+              <h2>우리가 하는 일</h2>
+            </div>
             <p className="services-intro">
               마인크래프트 BE·JE 콘텐츠부터 Unreal·Godot 기반 게임,
               2D·3D 리소스, 크리에이터 콘텐츠와 운영 기술까지 프로젝트에
