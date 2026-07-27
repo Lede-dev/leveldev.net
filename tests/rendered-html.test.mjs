@@ -38,7 +38,7 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /CONTENT/);
   assert.match(html, /아이디어를 경험으로/);
   assert.match(html, /연결합니다/);
-  assert.match(html, /10M\+/);
+  assert.match(html, /10M<\/span><span class="stat-suffix">\+<\/span>/);
   assert.match(html, /누적 콘텐츠 조회수/);
   assert.match(html, /완료 작업/);
   assert.match(html, /콘텐츠 개발 경력/);

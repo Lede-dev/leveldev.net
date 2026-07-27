@@ -400,7 +400,8 @@ a {
 }
 
 .stat-card strong {
-  display: block;
+  display: flex;
+  align-items: baseline;
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
   font-size: 56px;
@@ -411,6 +412,12 @@ a {
 .stat-card.featured strong {
   font-size: 66px;
   text-shadow: 0 0 35px rgba(132, 240, 0, 0.12);
+}
+
+.stat-suffix {
+  margin-left: 0.14em;
+  font-size: 0.82em;
+  letter-spacing: -0.03em;
 }
 
 .stat-card small {

@@ -2,10 +2,10 @@ import ProjectCarousel from "./components/project-carousel";
 import VideoShowcase from "./components/video-showcase";
 
 const stats = [
-  { value: "10M+", label: "누적 콘텐츠 조회수" },
-  { value: "10+", label: "완료 작업" },
-  { value: "5년+", label: "콘텐츠 개발 경력" },
-  { value: "10+", label: "파트너십" },
+  { value: "10M", suffix: "+", label: "누적 콘텐츠 조회수" },
+  { value: "10", suffix: "+", label: "완료 작업" },
+  { value: "5년", suffix: "+", label: "콘텐츠 개발 경력" },
+  { value: "10", suffix: "+", label: "파트너십" },
 ];
 
 const partners = [
@@ -280,7 +280,10 @@ export default function Home() {
                 className={`stat-card${index === 0 ? " featured" : ""}`}
                 key={stat.label}
               >
-                <strong>{stat.value}</strong>
+                <strong>
+                  <span>{stat.value}</span>
+                  <span className="stat-suffix">{stat.suffix}</span>
+                </strong>
                 <small>{stat.label}</small>
               </article>
             ))}
