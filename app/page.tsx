@@ -269,7 +269,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="about-summary">
-              LevelDev Inc.는 기획·개발·운영을 하나로 연결해 크리에이터와
+              레벨데브는 기획·개발·운영을 하나로 연결해 크리에이터와
               브랜드의 아이디어를 참여형 콘텐츠와 기술 기반 서비스로 구현합니다.
             </p>
           </div>
