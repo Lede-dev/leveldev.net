@@ -64,8 +64,10 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /대월향 &amp; 블루점프/);
   assert.match(html, /\/projects\/hangang-server\.png/);
   assert.match(html, /\/projects\/bluejump-oneblock\.png/);
-  assert.match(html, /class="project-visual"/);
-  assert.match(html, /class="project-content"/);
+  assert.match(html, /class="project-carousel"/);
+  assert.match(html, /class="project-track"/);
+  assert.match(html, /class="project-slide"/);
+  assert.match(html, /aria-label="다음 프로젝트 보기"/);
   assert.match(html, /\/videos\/mojingeo-game\.jpg/);
   assert.match(html, /youtube\.com\/watch\?v=I04NY35EDlg/);
   assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);
