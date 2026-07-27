@@ -71,6 +71,7 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /스트리머 서버/);
   assert.match(html, /서버 최적화/);
   assert.match(html, /콘텐츠 제작 파이프라인/);
+  assert.doesNotMatch(html, /마인크래프트 콘텐츠|마인크래프트 기술/);
   assert.match(html, /class="service-explorer"/);
   assert.match(html, /role="tablist"/);
   assert.match(html, /data-icon="world"/);
