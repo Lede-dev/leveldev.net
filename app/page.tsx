@@ -350,23 +350,27 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.title}>
-                {project.image ? (
-                  <img
-                    className={`project-image${project.imageFit === "contain" ? " contain" : ""}`}
-                    src={project.image}
-                    alt={`${project.title} 프로젝트`}
-                    width="640"
-                    height="360"
-                  />
-                ) : null}
-                <div className="project-topline">
-                  <span>{project.platform}</span>
-                  <span>{project.date}</span>
+                <div className="project-visual">
+                  {project.image ? (
+                    <img
+                      className={`project-image${project.imageFit === "contain" ? " contain" : ""}`}
+                      src={project.image}
+                      alt={`${project.title} 프로젝트`}
+                      width="960"
+                      height="540"
+                    />
+                  ) : null}
                 </div>
-                <div className="project-meta">
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <span className="project-link">CLIENT · {project.client}</span>
+                <div className="project-content">
+                  <div className="project-topline">
+                    <span>{project.platform}</span>
+                    <span>{project.date}</span>
+                  </div>
+                  <div className="project-meta">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <span className="project-link">CLIENT · {project.client}</span>
+                  </div>
                 </div>
               </article>
             ))}
