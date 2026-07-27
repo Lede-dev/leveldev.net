@@ -687,6 +687,16 @@ a {
   transform: translateY(-4px);
 }
 
+.project-card.is-linked {
+  cursor: pointer;
+}
+
+.project-card.is-linked:focus-visible {
+  border-color: rgba(132, 240, 0, 0.58);
+  outline: 2px solid var(--lime);
+  outline-offset: 4px;
+}
+
 .project-visual {
   position: relative;
   min-height: 310px;
@@ -766,6 +776,31 @@ a {
   color: #737d74;
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
+}
+
+.project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.project-action {
+  color: var(--lime);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: -0.02em;
+  opacity: 0.72;
+  white-space: nowrap;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.project-card.is-linked:hover .project-action,
+.project-card.is-linked:focus-visible .project-action {
+  opacity: 1;
+  transform: translateX(3px);
 }
 
 .project-controls {
@@ -1657,7 +1692,8 @@ footer {
   }
 
   .project-topline,
-  .project-link {
+  .project-link,
+  .project-action {
     font-size: 12px;
   }
 

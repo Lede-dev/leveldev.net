@@ -72,6 +72,17 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /class="project-track"/);
   assert.match(html, /class="project-slide"/);
   assert.match(html, /aria-label="다음 프로젝트 보기"/);
+  assert.match(
+    html,
+    /chzzk\.naver\.com\/05ca39e26587ea916a9eba1c6ae2d4ba\/community\/detail\/25626757/,
+  );
+  assert.match(
+    html,
+    /chzzk\.naver\.com\/6bcc176b0fa71673540159febcd97cd4\/community\/detail\/22065765/,
+  );
+  assert.match(html, /youtube\.com\/watch\?v=GAJ3yv0Ot9E/);
+  assert.match(html, /class="project-action">프로젝트 보기 ↗<\/span>/);
+  assert.match(html, /<article class="project-card">[\s\S]*?모징어 게임/);
   assert.match(html, /\/videos\/mojingeo-game\.jpg/);
   assert.match(html, /youtube\.com\/watch\?v=I04NY35EDlg/);
   assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);

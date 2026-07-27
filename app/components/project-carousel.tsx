@@ -10,6 +10,7 @@ type Project = {
   description: string;
   image: string;
   imageFit?: string;
+  href?: string;
 };
 
 type ProjectCarouselProps = {
@@ -18,6 +19,54 @@ type ProjectCarouselProps = {
 
 const PROJECTS_PER_PAGE = 2;
 const AUTO_PLAY_INTERVAL = 6000;
+
+function ProjectCard({ project }: { project: Project }) {
+  const content = (
+    <>
+      <div className="project-visual">
+        <img
+          className={`project-image${project.imageFit === "contain" ? " contain" : ""}`}
+          src={project.image}
+          alt={`${project.title} 프로젝트`}
+          width="720"
+          height="405"
+        />
+      </div>
+      <div className="project-content">
+        <div className="project-topline">
+          <span>{project.platform}</span>
+          <span>{project.date}</span>
+        </div>
+        <div className="project-meta">
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          <div className="project-footer">
+            <span className="project-link">CLIENT · {project.client}</span>
+            {project.href ? (
+              <span className="project-action">프로젝트 보기 ↗</span>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+
+  if (project.href) {
+    return (
+      <a
+        className="project-card is-linked"
+        href={project.href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${project.title} 프로젝트 관련 링크 열기`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <article className="project-card">{content}</article>;
+}
 
 export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -106,30 +155,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
             aria-label={`${pageIndex + 1} / ${pages.length}`}
           >
             {page.map((project) => (
-              <article className="project-card" key={project.title}>
-                <div className="project-visual">
-                  <img
-                    className={`project-image${project.imageFit === "contain" ? " contain" : ""}`}
-                    src={project.image}
-                    alt={`${project.title} 프로젝트`}
-                    width="720"
-                    height="405"
-                  />
-                </div>
-                <div className="project-content">
-                  <div className="project-topline">
-                    <span>{project.platform}</span>
-                    <span>{project.date}</span>
-                  </div>
-                  <div className="project-meta">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <span className="project-link">
-                      CLIENT · {project.client}
-                    </span>
-                  </div>
-                </div>
-              </article>
+              <ProjectCard project={project} key={project.title} />
             ))}
           </div>
         ))}

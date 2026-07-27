@@ -87,6 +87,7 @@ const projects = [
     description: "치지직 스트리머를 위해 기획·개발한 콘텐츠 서버입니다.",
     image: "/projects/hangang-server.png",
     imageFit: "contain",
+    href: "https://chzzk.naver.com/05ca39e26587ea916a9eba1c6ae2d4ba/community/detail/25626757",
   },
   {
     title: "이리와 운동회",
@@ -96,6 +97,7 @@ const projects = [
     description: "치지직 스트리머들이 함께 즐길 수 있도록 제작한 운동회 콘텐츠 서버입니다.",
     image: "/projects/iriwa-sports-day.png",
     imageFit: "cover",
+    href: "https://chzzk.naver.com/6bcc176b0fa71673540159febcd97cd4/community/detail/22065765",
   },
   {
     title: "모징어 게임",
@@ -114,6 +116,7 @@ const projects = [
     description: "SOOP 블루점프 멤버 전용으로 설계한 원블럭 콘텐츠 서버입니다.",
     image: "/projects/bluejump-oneblock.png",
     imageFit: "cover",
+    href: "https://www.youtube.com/watch?v=GAJ3yv0Ot9E",
   },
 ];
 
