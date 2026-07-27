@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://leveldev-studio-home.lede-7716.chatgpt.site"),
-  title: "LevelDev Studio — 콘텐츠 기획·개발·운영",
+  title: "LevelDev Inc. — 콘텐츠 기획·개발·운영",
   description:
-    "크리에이터, 브랜드, 플랫폼을 위한 콘텐츠 기획, 인터랙티브 개발, 기술 운영 서비스를 제공하는 크리에이티브 스튜디오 LevelDev입니다.",
+    "크리에이터, 브랜드, 플랫폼을 위한 콘텐츠 기획, 인터랙티브 개발, 기술 운영 서비스를 제공하는 콘텐츠 개발사 LevelDev Inc.입니다.",
   keywords: [
     "콘텐츠 개발",
     "콘텐츠 제작",
@@ -31,25 +31,25 @@ export const metadata: Metadata = {
     shortcut: "/logo.svg",
   },
   openGraph: {
-    title: "LevelDev Studio — We Build Content",
+    title: "LevelDev Inc. — We Build Content",
     description:
-      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 크리에이티브 스튜디오.",
+      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 콘텐츠 개발사.",
     type: "website",
     locale: "ko_KR",
     images: [
       {
         url: "/og.png",
-        width: 1733,
-        height: 908,
-        alt: "LevelDev Studio — Content Development Studio",
+        width: 1734,
+        height: 907,
+        alt: "LevelDev Inc. — Content Development Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LevelDev Studio — We Build Content",
+    title: "LevelDev Inc. — We Build Content",
     description:
-      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 크리에이티브 스튜디오.",
+      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 콘텐츠 개발사.",
     images: ["/og.png"],
   },
 };

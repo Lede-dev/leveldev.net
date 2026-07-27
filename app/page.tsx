@@ -4,7 +4,7 @@ import VideoShowcase from "./components/video-showcase";
 const stats = [
   { value: "10+", label: "완료 작업" },
   { value: "10M+", label: "누적 콘텐츠 조회수" },
-  { value: "5년+", label: "스튜디오 경력" },
+  { value: "5년+", label: "콘텐츠 개발 경력" },
   { value: "10+", label: "파트너십" },
 ];
 
@@ -234,7 +234,7 @@ export default function Home() {
         <div className="signal signal-b" aria-hidden="true" />
         <div className="signal signal-c" aria-hidden="true" />
         <div className="container hero-content">
-          <p className="eyebrow">CONTENT DEVELOPMENT STUDIO</p>
+          <p className="eyebrow">CONTENT DEVELOPMENT COMPANY</p>
           <h1>
             WE BUILD
             <span>CONTENT</span>
@@ -265,12 +265,12 @@ export default function Home() {
             <h2 className="display-title">
               기획부터 운영까지
               <br />
-              <span>연결하는 스튜디오</span>
+              <span>연결하는 콘텐츠 기업</span>
             </h2>
             <p className="section-copy">
-              LevelDev는 크리에이터, 브랜드, 플랫폼의 아이디어를 실제 콘텐츠로
-              구현하는 개발 스튜디오입니다. 목적과 타깃을 정의하고 기획, 디자인,
-              개발, 운영을 하나의 흐름으로 연결합니다.
+              LevelDev Inc.는 크리에이터, 브랜드, 플랫폼의 아이디어를 실제
+              콘텐츠로 구현하는 콘텐츠 개발사입니다. 목적과 타깃을 정의하고
+              기획, 디자인, 개발, 운영을 하나의 흐름으로 연결합니다.
             </p>
             <p className="section-copy dim">
               게임과 스트리밍 생태계에서 쌓은 제작 경험을 바탕으로 참여형 콘텐츠,
@@ -453,7 +453,7 @@ export default function Home() {
                 <strong>모집 중</strong>
               </li>
             </ul>
-            <a className="button button-primary contact-button" href="mailto:jobs@leveldev.studio">
+            <a className="button button-primary contact-button" href="mailto:contact@leveldev.net">
               지원 메일 보내기 <span>↗</span>
             </a>
           </aside>
@@ -491,8 +491,8 @@ export default function Home() {
           </div>
           <div className="footer-links">
             <div>
-              <strong>STUDIO</strong>
-              <a href="#about">스튜디오 소개</a>
+              <strong>COMPANY</strong>
+              <a href="#about">회사 소개</a>
               <a href="#partners">파트너</a>
               <a href="#contact">채용</a>
             </div>

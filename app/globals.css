@@ -834,7 +834,7 @@ a {
 
 .video-stage {
   display: grid;
-  grid-template-columns: minmax(0, 1.62fr) minmax(320px, 0.78fr);
+  grid-template-columns: minmax(0, 1.72fr) minmax(310px, 0.68fr);
   overflow: hidden;
   border: 1px solid var(--line);
   background: #050806;
@@ -843,7 +843,7 @@ a {
 .video-stage-media {
   position: relative;
   display: block;
-  min-height: 440px;
+  min-height: 470px;
   overflow: hidden;
   background: #000;
 }
@@ -1062,12 +1062,15 @@ a {
 }
 
 .video-selector {
-  display: flex;
   position: relative;
+  display: grid;
   min-width: 0;
-  flex-direction: column;
+  min-height: 108px;
+  grid-template-columns: 138px minmax(0, 1fr);
+  align-items: center;
+  gap: 15px;
   overflow: hidden;
-  padding: 0;
+  padding: 12px;
   border: 1px solid var(--line);
   color: inherit;
   background: #050806;
@@ -1091,7 +1094,7 @@ a {
 .video-selector-image {
   position: relative;
   display: block;
-  width: 100%;
+  width: 138px;
   overflow: hidden;
   background: #000;
 }
@@ -1125,9 +1128,9 @@ a {
 .video-selector-copy {
   display: flex;
   min-width: 0;
-  min-height: 150px;
+  min-height: 0;
   flex-direction: column;
-  padding: 18px 19px 20px;
+  padding: 2px 0;
 }
 
 .video-selector-copy small,
@@ -1140,8 +1143,8 @@ a {
 .video-selector-copy strong {
   display: -webkit-box;
   overflow: hidden;
-  margin: 10px 0 14px;
-  font-size: 15px;
+  margin: 7px 0 9px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.35;
   -webkit-box-orient: vertical;
@@ -1670,7 +1673,7 @@ footer {
   }
 
   .video-stage-media {
-    min-height: 510px;
+    min-height: 560px;
   }
 
   .video-stage-info {
@@ -1691,11 +1694,16 @@ footer {
   }
 
   .video-selector-copy strong {
-    font-size: 17px;
+    font-size: 16px;
   }
 
-  .video-selector-copy {
-    min-height: 166px;
+  .video-selector {
+    min-height: 120px;
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+
+  .video-selector-image {
+    width: 160px;
   }
 
   .notice-grid article {
@@ -2025,12 +2033,19 @@ footer {
   }
 
   .video-selector {
-    min-height: 0;
+    min-height: 94px;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 12px;
+    padding: 10px;
   }
 
   .video-selector-copy {
-    min-height: 142px;
-    padding: 16px;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .video-selector-image {
+    width: 112px;
   }
 
   .video-queue-arrows button {

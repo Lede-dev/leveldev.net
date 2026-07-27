@@ -22,7 +22,7 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the LevelDev content development studio landing page", async () => {
+test("server-renders the LevelDev Inc. content development company landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -31,16 +31,19 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /<html lang="ko">/i);
   assert.match(
     html,
-    /<title>LevelDev Studio — 콘텐츠 기획·개발·운영<\/title>/i,
+    /<title>LevelDev Inc\. — 콘텐츠 기획·개발·운영<\/title>/i,
   );
-  assert.match(html, /CONTENT DEVELOPMENT STUDIO/);
+  assert.match(html, /CONTENT DEVELOPMENT COMPANY/);
   assert.match(html, /WE BUILD/);
   assert.match(html, /CONTENT/);
   assert.match(html, /기획부터 운영까지/);
   assert.match(html, /10M\+/);
   assert.match(html, /누적 콘텐츠 조회수/);
   assert.match(html, /완료 작업/);
-  assert.match(html, /스튜디오 경력/);
+  assert.match(html, /콘텐츠 개발 경력/);
+  assert.match(html, /LevelDev Inc\.는/);
+  assert.match(html, /연결하는 콘텐츠 기업/);
+  assert.match(html, /콘텐츠 개발사입니다/);
   assert.match(html, /이루/);
   assert.match(html, /셔니/);
   assert.match(html, /블던/);
@@ -73,7 +76,7 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);
   assert.match(html, /youtube\.com\/watch\?v=0PJj4ETImRQ/);
   assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
-  assert.match(html, /mailto:jobs@leveldev\.studio/);
+  assert.match(html, /mailto:contact@leveldev\.net/);
   assert.match(html, /https:\/\/discord\.gg\/49HEWTA/);
   assert.match(html, /youtube\.com\/channel\/UCYRR-uYiex4Cx7IIIwFlEpg/);
   assert.match(html, /https:\/\/github\.com\/leveldevinc/);
@@ -92,6 +95,7 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /YouTube 채널에서 더 보기/);
   assert.match(html, /© 2026 LEVELDEV INC\. ALL RIGHTS RESERVED\./);
   assert.doesNotMatch(html, /© 2026 LEVELDEV STUDIO/);
+  assert.doesNotMatch(html, /CONTENT DEVELOPMENT STUDIO|스튜디오 소개|개발 스튜디오/);
   assert.doesNotMatch(html, /brand-mark|채널 구독 문의/);
   assert.doesNotMatch(html, /filter-row|project-number|id="history"|HISTORY/);
   assert.doesNotMatch(html, /hello@leveldev\.studio|LedeStudios/);
