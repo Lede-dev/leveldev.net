@@ -1,6 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 type Video = {
   title: string;
@@ -20,7 +26,50 @@ export default function VideoShowcase({
   channelHref,
 }: VideoShowcaseProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [canScrollBack, setCanScrollBack] = useState(false);
+  const [canScrollForward, setCanScrollForward] = useState(false);
+  const queueRef = useRef<HTMLDivElement>(null);
   const activeVideo = videos[activeIndex];
+  const queuedVideos = useMemo(
+    () =>
+      videos
+        .map((video, index) => ({ video, index }))
+        .filter(({ index }) => index !== activeIndex),
+    [activeIndex, videos],
+  );
+
+  const updateQueueControls = useCallback(() => {
+    const queue = queueRef.current;
+    if (!queue) return;
+
+    const maxScrollLeft = queue.scrollWidth - queue.clientWidth;
+    setCanScrollBack(queue.scrollLeft > 4);
+    setCanScrollForward(maxScrollLeft - queue.scrollLeft > 4);
+  }, []);
+
+  useEffect(() => {
+    const queue = queueRef.current;
+    if (!queue) return;
+
+    queue.scrollTo({ left: 0, behavior: "instant" });
+    const frame = window.requestAnimationFrame(updateQueueControls);
+    window.addEventListener("resize", updateQueueControls);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("resize", updateQueueControls);
+    };
+  }, [activeIndex, queuedVideos.length, updateQueueControls]);
+
+  const scrollQueue = (direction: -1 | 1) => {
+    const queue = queueRef.current;
+    if (!queue) return;
+
+    queue.scrollBy({
+      left: direction * Math.max(queue.clientWidth * 0.82, 280),
+      behavior: "smooth",
+    });
+  };
 
   if (!activeVideo) return null;
 
@@ -64,32 +113,65 @@ export default function VideoShowcase({
       </div>
 
       <div className="video-selector-heading">
-        <p>NEXT VIDEOS</p>
-        <a href={channelHref} target="_blank" rel="noreferrer">
-          YouTube 채널에서 더 보기 <span>↗</span>
-        </a>
-      </div>
-
-      <div className="video-selectors">
-        {videos.map((video, index) =>
-          index === activeIndex ? null : (
+        <div className="video-queue-title">
+          <p>NEXT VIDEOS</p>
+          <span>{String(queuedVideos.length).padStart(2, "0")} VIDEOS</span>
+        </div>
+        <div className="video-queue-actions">
+          <a href={channelHref} target="_blank" rel="noreferrer">
+            YouTube 채널에서 더 보기 <span>↗</span>
+          </a>
+          <div className="video-queue-arrows">
             <button
               type="button"
-              className="video-selector"
-              key={video.title}
-              onClick={() => setActiveIndex(index)}
-              aria-label={`${video.title} 메인 영상으로 선택`}
+              onClick={() => scrollQueue(-1)}
+              disabled={!canScrollBack}
+              aria-label="이전 영상 목록 보기"
             >
-              <img src={video.image} alt="" width="240" height="135" />
-              <span className="video-selector-copy">
-                <small>{video.author}</small>
-                <strong>{video.title}</strong>
-                <span>{video.meta}</span>
-              </span>
-              <b aria-hidden="true">선택</b>
+              ←
             </button>
-          ),
-        )}
+            <button
+              type="button"
+              onClick={() => scrollQueue(1)}
+              disabled={!canScrollForward}
+              aria-label="다음 영상 목록 보기"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="video-selectors"
+        data-count={Math.min(queuedVideos.length, 3)}
+        ref={queueRef}
+        onScroll={updateQueueControls}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowLeft") scrollQueue(-1);
+          if (event.key === "ArrowRight") scrollQueue(1);
+        }}
+        aria-label="다음 영상 목록"
+      >
+        {queuedVideos.map(({ video, index }) => (
+          <button
+            type="button"
+            className="video-selector"
+            key={video.title}
+            onClick={() => setActiveIndex(index)}
+            aria-label={`${video.title} 메인 영상으로 선택`}
+          >
+            <span className="video-selector-image">
+              <img src={video.image} alt="" width="480" height="270" />
+              <b aria-hidden="true">SELECT</b>
+            </span>
+            <span className="video-selector-copy">
+              <small>{video.author}</small>
+              <strong>{video.title}</strong>
+              <span>{video.meta}</span>
+            </span>
+          </button>
+        ))}
       </div>
     </div>
   );

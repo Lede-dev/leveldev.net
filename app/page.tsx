@@ -515,7 +515,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container footer-bottom">
-          <span>© 2026 LEVELDEV STUDIO. ALL RIGHTS RESERVED.</span>
+          <span>© 2026 LEVELDEV INC. ALL RIGHTS RESERVED.</span>
           <span>모든 콘텐츠는 좋은 질문에서 시작됩니다.</span>
         </div>
       </footer>
