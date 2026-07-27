@@ -202,8 +202,8 @@ function BrandLogo() {
       className="brand-logo"
       src="/logo.svg"
       alt=""
-      width="24"
-      height="22"
+      width="116"
+      height="36"
       aria-hidden="true"
     />
   );
@@ -215,7 +215,6 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="LevelDev 홈">
           <BrandLogo />
-          <span>LEVELDEV</span>
         </a>
         <nav aria-label="주요 메뉴">
           <a href="#about">소개</a>
@@ -467,7 +466,6 @@ export default function Home() {
           <div className="footer-brand">
             <a className="brand" href="#top" aria-label="LevelDev 홈">
               <BrandLogo />
-              <span>LEVELDEV</span>
             </a>
             <p>아이디어를 콘텐츠로, 콘텐츠를 경험으로.</p>
             <div className="social-row">

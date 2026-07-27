@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     "LevelDev",
   ],
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
+    icon: "/symbol.svg",
+    shortcut: "/symbol.svg",
   },
   openGraph: {
     title: "LevelDev Inc. — We Build Content",

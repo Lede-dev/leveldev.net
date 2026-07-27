@@ -86,6 +86,8 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /\/icons\/github\.svg/);
   assert.match(html, /\/icons\/mail\.svg/);
   assert.match(html, /\/logo\.svg/);
+  assert.match(html, /\/symbol\.svg/);
+  assert.doesNotMatch(html, /<span>LEVELDEV<\/span>/);
   assert.match(html, /class="media-showcase"/);
   assert.match(html, /SELECTED VIDEO/);
   assert.match(html, /NEXT VIDEOS/);
