@@ -135,6 +135,37 @@ const featuredVideo = {
   image: "/videos/mojingeo-game.jpg",
 };
 
+const socialLinks = [
+  {
+    name: "Discord",
+    detail: "커뮤니티 참여",
+    href: "https://discord.gg/49HEWTA",
+    icon: "/icons/discord.svg",
+    external: true,
+  },
+  {
+    name: "YouTube",
+    detail: "콘텐츠 채널",
+    href: "https://www.youtube.com/channel/UCYRR-uYiex4Cx7IIIwFlEpg",
+    icon: "/icons/youtube.svg",
+    external: true,
+  },
+  {
+    name: "GitHub",
+    detail: "leveldevinc",
+    href: "https://github.com/leveldevinc",
+    icon: "/icons/github.svg",
+    external: true,
+  },
+  {
+    name: "Email",
+    detail: "contact@leveldev.net",
+    href: "mailto:contact@leveldev.net",
+    icon: "/icons/mail.svg",
+    external: false,
+  },
+];
+
 const notices = [
   {
     date: "ONGOING",
@@ -555,15 +586,24 @@ export default function Home() {
             </a>
             <p>아이디어를 콘텐츠로, 콘텐츠를 경험으로.</p>
             <div className="social-row">
-              <a href="#media" aria-label="유튜브 콘텐츠">
-                YT
-              </a>
-              <a href="#contact" aria-label="Discord 커뮤니티">
-                DC
-              </a>
-              <a href="mailto:hello@leveldev.studio" aria-label="LevelDev 이메일">
-                EM
-              </a>
+              {socialLinks.map((social) => (
+                <a
+                  href={social.href}
+                  key={social.name}
+                  target={social.external ? "_blank" : undefined}
+                  rel={social.external ? "noreferrer" : undefined}
+                  aria-label={`${social.name} ${social.detail}`}
+                >
+                  <span className="social-icon" aria-hidden="true">
+                    <img src={social.icon} alt="" width="22" height="22" />
+                  </span>
+                  <span className="social-copy">
+                    <strong>{social.name}</strong>
+                    <small>{social.detail}</small>
+                  </span>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              ))}
             </div>
           </div>
           <div className="footer-links">
@@ -581,14 +621,18 @@ export default function Home() {
             </div>
             <div>
               <strong>CONTACT</strong>
-              <a href="mailto:hello@leveldev.studio">Email</a>
-              <a href="#contact">Discord</a>
-              <a href="#contact">문의하기</a>
+              <a href="mailto:contact@leveldev.net">Email</a>
+              <a href="https://discord.gg/49HEWTA" target="_blank" rel="noreferrer">
+                Discord
+              </a>
+              <a href="https://github.com/leveldevinc" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
             </div>
           </div>
         </div>
         <div className="container footer-bottom">
-          <span>© 2025 LEVELDEV STUDIO. ALL RIGHTS RESERVED.</span>
+          <span>© 2026 LEVELDEV STUDIO. ALL RIGHTS RESERVED.</span>
           <span>모든 콘텐츠는 좋은 질문에서 시작됩니다.</span>
         </div>
       </footer>

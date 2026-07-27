@@ -65,8 +65,16 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
   assert.match(html, /콘텐츠 서비스 영역 확장/);
   assert.match(html, /mailto:jobs@leveldev\.studio/);
+  assert.match(html, /https:\/\/discord\.gg\/49HEWTA/);
+  assert.match(html, /youtube\.com\/channel\/UCYRR-uYiex4Cx7IIIwFlEpg/);
+  assert.match(html, /https:\/\/github\.com\/leveldevinc/);
+  assert.match(html, /mailto:contact@leveldev\.net/);
+  assert.match(html, /\/icons\/discord\.svg/);
+  assert.match(html, /\/icons\/youtube\.svg/);
+  assert.match(html, /\/icons\/github\.svg/);
+  assert.match(html, /\/icons\/mail\.svg/);
   assert.doesNotMatch(html, /filter-row|project-number/);
-  assert.doesNotMatch(html, /github\.com|LedeStudios|GitHub/);
+  assert.doesNotMatch(html, /hello@leveldev\.studio|LedeStudios/);
 });
 
 test("ships finished metadata without starter preview markers", async () => {

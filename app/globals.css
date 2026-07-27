@@ -629,11 +629,9 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.72;
-  filter: saturate(0.72) contrast(1.08);
-  transition:
-    opacity 260ms ease,
-    transform 360ms ease;
+  opacity: 1;
+  filter: none;
+  transition: transform 360ms ease;
 }
 
 .project-image.contain {
@@ -642,30 +640,7 @@ a {
   background: #000;
 }
 
-.project-card::before {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  content: "";
-  background: linear-gradient(180deg, rgba(2, 4, 3, 0.18), rgba(2, 4, 3, 0.48) 48%, #020403 100%);
-}
-
-.project-card::after {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  content: "";
-  opacity: 0;
-  background: radial-gradient(circle at 50% 43%, rgba(132, 240, 0, 0.12), transparent 40%);
-  transition: opacity 220ms ease;
-}
-
-.project-card:hover::after {
-  opacity: 1;
-}
-
 .project-card:hover .project-image {
-  opacity: 0.84;
   transform: scale(1.025);
 }
 
@@ -677,17 +652,24 @@ a {
   color: #4c554d;
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
 }
 
 .project-topline span:first-child {
   padding: 4px 6px;
   border: 1px solid rgba(132, 240, 0, 0.16);
   color: rgba(132, 240, 0, 0.7);
+  background: rgba(2, 4, 3, 0.64);
 }
 
 .project-meta {
   position: relative;
   z-index: 2;
+  margin: 0 -25px -25px;
+  padding: 23px 25px 25px;
+  border-top: 1px solid rgba(132, 240, 0, 0.08);
+  background: linear-gradient(180deg, rgba(2, 4, 3, 0.56), rgba(2, 4, 3, 0.94));
+  backdrop-filter: blur(9px);
 }
 
 .project-meta h3 {
@@ -698,13 +680,13 @@ a {
 
 .project-meta p {
   margin: 10px 0 18px;
-  color: #555e56;
+  color: #a0a9a0;
   font-size: 13px;
   line-height: 1.58;
 }
 
 .project-link {
-  color: #4e584f;
+  color: #737e74;
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
 }
@@ -1180,11 +1162,12 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 72px;
 }
 
 .footer-brand > p {
-  margin: 17px 0;
+  margin: 17px 0 23px;
   color: #4f584f;
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
@@ -1192,19 +1175,84 @@ footer {
 }
 
 .social-row {
-  display: flex;
-  gap: 7px;
+  display: grid;
+  max-width: 480px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
 
 .social-row a {
   display: grid;
-  width: 32px;
-  height: 32px;
-  place-items: center;
+  min-height: 66px;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 12px;
   border: 1px solid var(--line);
-  color: #687068;
+  background: #030604;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.social-row a:hover,
+.social-row a:focus-visible {
+  border-color: rgba(132, 240, 0, 0.38);
+  background: #060a07;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid rgba(132, 240, 0, 0.13);
+  background: rgba(132, 240, 0, 0.045);
+}
+
+.social-icon img {
+  width: 21px;
+  height: 21px;
+  filter: brightness(0) invert(0.76);
+  transition: filter 180ms ease;
+}
+
+.social-row a:hover .social-icon img,
+.social-row a:focus-visible .social-icon img {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(94%) saturate(1576%)
+    hue-rotate(34deg) brightness(101%) contrast(105%);
+}
+
+.social-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.social-copy strong {
+  color: #dce3da;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.social-copy small {
+  overflow: hidden;
+  color: #535c54;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 8px;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.social-row a > b {
+  color: rgba(132, 240, 0, 0.45);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  font-weight: 400;
 }
 
 .footer-links {
@@ -1272,6 +1320,11 @@ footer {
 
   .video-list .video-item {
     min-height: 104px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 54px;
   }
 }
 
@@ -1440,9 +1493,9 @@ footer {
     padding: 27px 23px;
   }
 
-  .footer-grid {
+  .social-row {
+    max-width: none;
     grid-template-columns: 1fr;
-    gap: 48px;
   }
 
   .footer-links {
