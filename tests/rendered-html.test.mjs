@@ -85,6 +85,10 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /class="project-track"/);
   assert.match(html, /class="project-slide"/);
   assert.match(html, /aria-label="다음 프로젝트 보기"/);
+  assert.ok(
+    html.indexOf("블루점프 원블럭") < html.indexOf("한강서버"),
+    "projects should render newest first",
+  );
   assert.match(
     html,
     /chzzk\.naver\.com\/05ca39e26587ea916a9eba1c6ae2d4ba\/community\/detail\/25626757/,
@@ -114,6 +118,10 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /\/symbol\.svg/);
   assert.doesNotMatch(html, /<span>LEVELDEV<\/span>/);
   assert.match(html, /class="media-showcase"/);
+  assert.match(
+    html,
+    /class="video-stage"[\s\S]*?\/videos\/hangang-server\.jpg[\s\S]*?김용찬[\s\S]*?2026\.05\.24/,
+  );
   assert.match(html, /SELECTED VIDEO/);
   assert.match(html, /NEXT VIDEOS/);
   assert.match(html, /aria-label="이전 영상 목록 보기"/);

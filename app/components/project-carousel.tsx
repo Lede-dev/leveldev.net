@@ -72,17 +72,21 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [activePage, setActivePage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const sortedProjects = useMemo(
+    () => [...projects].sort((a, b) => b.date.localeCompare(a.date)),
+    [projects],
+  );
   const pages = useMemo(
     () =>
       Array.from(
-        { length: Math.ceil(projects.length / PROJECTS_PER_PAGE) },
+        { length: Math.ceil(sortedProjects.length / PROJECTS_PER_PAGE) },
         (_, index) =>
-          projects.slice(
+          sortedProjects.slice(
             index * PROJECTS_PER_PAGE,
             index * PROJECTS_PER_PAGE + PROJECTS_PER_PAGE,
           ),
       ),
-    [projects],
+    [sortedProjects],
   );
 
   const goToPage = (page: number) => {

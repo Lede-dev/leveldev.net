@@ -10,6 +10,7 @@ import {
 
 type Video = {
   title: string;
+  date: string;
   meta: string;
   author: string;
   href: string;
@@ -29,13 +30,17 @@ export default function VideoShowcase({
   const [canScrollBack, setCanScrollBack] = useState(false);
   const [canScrollForward, setCanScrollForward] = useState(false);
   const queueRef = useRef<HTMLDivElement>(null);
-  const activeVideo = videos[activeIndex];
+  const sortedVideos = useMemo(
+    () => [...videos].sort((a, b) => b.date.localeCompare(a.date)),
+    [videos],
+  );
+  const activeVideo = sortedVideos[activeIndex];
   const queuedVideos = useMemo(
     () =>
-      videos
+      sortedVideos
         .map((video, index) => ({ video, index }))
         .filter(({ index }) => index !== activeIndex),
-    [activeIndex, videos],
+    [activeIndex, sortedVideos],
   );
 
   const updateQueueControls = useCallback(() => {

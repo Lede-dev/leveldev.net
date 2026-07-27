@@ -176,6 +176,7 @@ const projects = [
 const videos = [
   {
     title: "【한강 서버】벽 뒤에 자꾸 뭐가 보임",
+    date: "2026.05.24",
     meta: "2.8천 조회 · 2026.05.24",
     author: "김용찬",
     href: "https://www.youtube.com/watch?v=UNk70G0rAS0&t=2s",
@@ -183,20 +184,21 @@ const videos = [
   },
   {
     title: "하꼬가 치지직지원을 받았다고? 😲🫢 | 이리와 운동회",
+    date: "2025.10.11",
     meta: "2.3천 조회 · 2025.10.11",
     author: "유이리",
     href: "https://www.youtube.com/watch?v=0PJj4ETImRQ&t=30s",
     image: "/videos/iriwa-sports-day.jpg",
   },
+  {
+    title: "오징어 게임에서 1등 하기",
+    date: "2025.07.27",
+    meta: "18.7만 조회 · 2025.07.27",
+    author: "블루맥스",
+    href: "https://www.youtube.com/watch?v=I04NY35EDlg&t=26s",
+    image: "/videos/mojingeo-game.jpg",
+  },
 ];
-
-const featuredVideo = {
-  title: "오징어 게임에서 1등 하기",
-  meta: "18.7만 조회 · 2025.07.27",
-  author: "블루맥스",
-  href: "https://www.youtube.com/watch?v=I04NY35EDlg&t=26s",
-  image: "/videos/mojingeo-game.jpg",
-};
 
 const socialLinks = [
   {
@@ -415,7 +417,7 @@ export default function Home() {
             <h2>최근 영상</h2>
           </div>
           <VideoShowcase
-            videos={[featuredVideo, ...videos]}
+            videos={videos}
             channelHref="https://www.youtube.com/channel/UCYRR-uYiex4Cx7IIIwFlEpg"
           />
         </div>
