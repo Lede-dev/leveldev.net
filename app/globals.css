@@ -192,14 +192,22 @@ a {
   max-width: 1120px;
   margin: 0;
   font-size: clamp(62px, 7.7vw, 112px);
-  font-weight: 850;
+  font-weight: 820;
   line-height: 0.86;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.025em;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
 }
 
 .hero h1 span {
   display: block;
   white-space: nowrap;
+}
+
+.hero h1 .hero-slogan-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.24em;
 }
 
 .hero h1 .hero-slogan-lead {
@@ -2494,6 +2502,10 @@ footer {
   .hero h1 {
     font-size: clamp(36px, 11vw, 48px);
     line-height: 0.9;
+  }
+
+  .hero h1 .hero-slogan-line {
+    gap: 0.2em;
   }
 
   .hero h1 .hero-slogan-accent {

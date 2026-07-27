@@ -269,9 +269,16 @@ export default function Home() {
         <div className="signal signal-c" aria-hidden="true" />
         <div className="container hero-content">
           <p className="eyebrow">CONTENT DEVELOPMENT COMPANY</p>
-          <h1>
-            <span className="hero-slogan-lead">WE BUILD PLAY</span>
-            <span className="hero-slogan-accent">FOR EVERYONE.</span>
+          <h1 aria-label="We Build Play for Everyone.">
+            <span className="hero-slogan-line hero-slogan-lead" aria-hidden="true">
+              <span>WE</span>
+              <span>BUILD</span>
+              <span>PLAY</span>
+            </span>
+            <span className="hero-slogan-line hero-slogan-accent" aria-hidden="true">
+              <span>FOR</span>
+              <span>EVERYONE.</span>
+            </span>
           </h1>
           <p className="hero-copy">
             기획부터 제작, 기술 개발과 운영까지,
