@@ -592,31 +592,13 @@ a {
   margin-top: 17px;
 }
 
-.tag-row span,
-.filter-row span {
+.tag-row span {
   padding: 6px 8px;
   border: 1px solid #161e17;
   color: #586058;
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
   letter-spacing: 0.04em;
-}
-
-.filter-row {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 23px;
-}
-
-.filter-row span {
-  min-width: 50px;
-}
-
-.filter-row .active {
-  border-color: var(--lime);
-  color: #071004;
-  background: var(--lime);
 }
 
 .project-grid {
@@ -701,23 +683,6 @@ a {
   padding: 4px 6px;
   border: 1px solid rgba(132, 240, 0, 0.16);
   color: rgba(132, 240, 0, 0.7);
-}
-
-.project-number {
-  position: absolute;
-  z-index: 2;
-  top: 57px;
-  left: 50%;
-  color: rgba(132, 240, 0, 0.3);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 64px;
-  letter-spacing: -0.08em;
-  transform: translateX(-50%);
-}
-
-.project-card:has(.project-image) .project-number {
-  color: rgba(255, 255, 255, 0.28);
-  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.7);
 }
 
 .project-meta {

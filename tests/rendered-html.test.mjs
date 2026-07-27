@@ -65,6 +65,7 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
   assert.match(html, /콘텐츠 서비스 영역 확장/);
   assert.match(html, /mailto:jobs@leveldev\.studio/);
+  assert.doesNotMatch(html, /filter-row|project-number/);
   assert.doesNotMatch(html, /github\.com|LedeStudios|GitHub/);
 });
 

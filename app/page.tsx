@@ -73,7 +73,6 @@ const services = [
 
 const projects = [
   {
-    no: "01",
     title: "한강서버",
     client: "한사기",
     date: "2026.04",
@@ -83,7 +82,6 @@ const projects = [
     imageFit: "contain",
   },
   {
-    no: "02",
     title: "이리와 운동회",
     client: "유이리",
     date: "2025.09",
@@ -93,7 +91,6 @@ const projects = [
     imageFit: "cover",
   },
   {
-    no: "03",
     title: "모징어 게임",
     client: "로빈",
     date: "2025.07",
@@ -103,7 +100,6 @@ const projects = [
     imageFit: "cover",
   },
   {
-    no: "04",
     title: "블루점프 원블럭",
     client: "대월향 & 블루점프",
     date: "2026.05",
@@ -347,16 +343,10 @@ export default function Home() {
           <div className="section-heading centered">
             <p className="eyebrow">PORTFOLIO</p>
             <h2>프로젝트</h2>
-            <div className="filter-row" aria-label="프로젝트 분류">
-              <span className="active">전체</span>
-              <span>콘텐츠 서버</span>
-              <span>인터랙티브</span>
-              <span>크리에이터</span>
-            </div>
           </div>
           <div className="project-grid">
             {projects.map((project) => (
-              <article className="project-card" key={project.no}>
+              <article className="project-card" key={project.title}>
                 {project.image ? (
                   <img
                     className={`project-image${project.imageFit === "contain" ? " contain" : ""}`}
@@ -370,7 +360,6 @@ export default function Home() {
                   <span>{project.platform}</span>
                   <span>{project.date}</span>
                 </div>
-                <strong className="project-number">{project.no}</strong>
                 <div className="project-meta">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
