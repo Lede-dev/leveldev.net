@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Clapperboard,
+  Gamepad2,
+  Map,
+  ServerCog,
+  type LucideIcon,
+} from "lucide-react";
 import { useState } from "react";
 
 type ServiceGroup = {
@@ -10,7 +17,6 @@ type ServiceGroup = {
 type Service = {
   code: string;
   icon: "world" | "gameplay" | "creator" | "tech";
-  kicker: string;
   title: string;
   lead: string;
   text: string;
@@ -21,8 +27,21 @@ type ServiceExplorerProps = {
   services: Service[];
 };
 
+const serviceIcons: Record<Service["icon"], LucideIcon> = {
+  world: Map,
+  gameplay: Gamepad2,
+  creator: Clapperboard,
+  tech: ServerCog,
+};
+
 function ServiceGlyph({ icon }: { icon: Service["icon"] }) {
-  return <span className="service-glyph" data-icon={icon} aria-hidden="true" />;
+  const Icon = serviceIcons[icon];
+
+  return (
+    <span className="service-glyph" data-icon={icon} aria-hidden="true">
+      <Icon strokeWidth={1.7} />
+    </span>
+  );
 }
 
 export default function ServiceExplorer({ services }: ServiceExplorerProps) {
@@ -86,8 +105,6 @@ export default function ServiceExplorer({ services }: ServiceExplorerProps) {
           key={service.code}
         >
           <div className="service-panel-copy">
-            <span>{service.kicker}</span>
-            <h3>{service.title}</h3>
             <p>{service.text}</p>
           </div>
           <div className="service-panel-scopes">

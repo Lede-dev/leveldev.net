@@ -53,7 +53,10 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /Stella IT/);
   assert.match(html, /\/partners\/iru\.jpg/);
   assert.match(html, /https:\/\/stella-it\.com\//);
-  assert.match(html, /마인크래프트 BE·JE 콘텐츠부터 Unreal·Godot 기반 게임/);
+  assert.doesNotMatch(
+    html,
+    /마인크래프트 BE·JE 콘텐츠부터 Unreal·Godot 기반 게임/,
+  );
   assert.match(html, /월드·맵 &amp; 아트 리소스 제작/);
   assert.match(html, /게임플레이 &amp; 시스템 개발/);
   assert.match(html, /크리에이터 콘텐츠 제작/);
@@ -74,6 +77,10 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /data-icon="gameplay"/);
   assert.match(html, /data-icon="creator"/);
   assert.match(html, /data-icon="tech"/);
+  assert.match(html, /lucide-map/);
+  assert.match(html, /lucide-gamepad-2/);
+  assert.match(html, /lucide-clapperboard/);
+  assert.match(html, /lucide-server-cog/);
   assert.match(html, /한강서버/);
   assert.match(html, /이리와 운동회/);
   assert.match(html, /모징어 게임/);

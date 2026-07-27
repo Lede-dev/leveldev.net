@@ -52,7 +52,6 @@ const services = [
   {
     code: "01",
     icon: "world" as const,
-    kicker: "WORLD & ASSETS",
     title: "월드·맵 & 아트 리소스 제작",
     lead: "게임과 콘텐츠에 필요한 공간과 시각 자산을 제작합니다.",
     text: "콘셉트와 플레이 흐름에 맞춰 월드와 맵, 지형, 건축물, 이벤트 공간을 설계하고 2D·3D 리소스를 제작합니다. 마인크래프트를 포함한 다양한 게임과 콘텐츠 환경에 맞춰 공간의 기능과 시각적 완성도를 함께 설계합니다.",
@@ -70,7 +69,6 @@ const services = [
   {
     code: "02",
     icon: "gameplay" as const,
-    kicker: "GAMEPLAY & SYSTEMS",
     title: "게임플레이 & 시스템 개발",
     lead: "기획된 규칙과 상호작용을 실제로 플레이 가능한 기능으로 구현합니다.",
     text: "마인크래프트에서는 플러그인과 모드를 활용해 콘텐츠 규칙, 시스템, 상호작용을 개발합니다. 그 외 프로젝트에서는 Unreal과 Godot을 기반으로 2D·3D 게임과 플레이 가능한 콘텐츠를 구현합니다.",
@@ -88,7 +86,6 @@ const services = [
   {
     code: "03",
     icon: "creator" as const,
-    kicker: "CREATOR CONTENT",
     title: "크리에이터 콘텐츠 제작",
     lead: "방송과 영상에서 활용할 수 있는 참여형 콘텐츠를 만듭니다.",
     text: "마인크래프트 스트리머 서버뿐 아니라 크리에이터와 브랜드의 아이디어를 기반으로 방송, 촬영, 참여형 이벤트와 유튜브 콘텐츠에 적합한 경험을 기획하고 제작합니다.",
@@ -110,7 +107,6 @@ const services = [
   {
     code: "04",
     icon: "tech" as const,
-    kicker: "TECH & OPERATIONS",
     title: "기술 개발 & 운영 지원",
     lead: "콘텐츠가 안정적으로 제작되고 서비스되도록 기술 기반을 구축합니다.",
     text: "마인크래프트 서버와 런처 개발부터 게임 및 콘텐츠 프로젝트의 자동화, 운영 환경, 제작 파이프라인까지 필요한 기술 구조를 제안하고 개발합니다. 기획과 프로젝트 관리, 출시 이후 운영도 함께 지원합니다.",
@@ -390,11 +386,6 @@ export default function Home() {
               <p className="eyebrow">SERVICES</p>
               <h2>우리가 하는 일</h2>
             </div>
-            <p className="services-intro">
-              마인크래프트 BE·JE 콘텐츠부터 Unreal·Godot 기반 게임,
-              2D·3D 리소스, 크리에이터 콘텐츠와 운영 기술까지 프로젝트에
-              필요한 제작 영역을 연결합니다.
-            </p>
           </div>
           <ServiceExplorer services={services} />
         </div>
