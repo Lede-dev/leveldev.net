@@ -1,4 +1,5 @@
 import ProjectCarousel from "./components/project-carousel";
+import ServiceExplorer from "./components/service-explorer";
 import VideoShowcase from "./components/video-showcase";
 
 const stats = [
@@ -50,6 +51,7 @@ const partners = [
 const services = [
   {
     code: "01",
+    icon: "world" as const,
     kicker: "WORLD & ASSETS",
     title: "월드·맵 & 아트 리소스 제작",
     lead: "게임과 콘텐츠에 필요한 공간과 시각 자산을 제작합니다.",
@@ -67,6 +69,7 @@ const services = [
   },
   {
     code: "02",
+    icon: "gameplay" as const,
     kicker: "GAMEPLAY & SYSTEMS",
     title: "게임플레이 & 시스템 개발",
     lead: "기획된 규칙과 상호작용을 실제로 플레이 가능한 기능으로 구현합니다.",
@@ -84,6 +87,7 @@ const services = [
   },
   {
     code: "03",
+    icon: "creator" as const,
     kicker: "CREATOR CONTENT",
     title: "크리에이터 콘텐츠 제작",
     lead: "방송과 영상에서 활용할 수 있는 참여형 콘텐츠를 만듭니다.",
@@ -105,6 +109,7 @@ const services = [
   },
   {
     code: "04",
+    icon: "tech" as const,
     kicker: "TECH & OPERATIONS",
     title: "기술 개발 & 운영 지원",
     lead: "콘텐츠가 안정적으로 제작되고 서비스되도록 기술 기반을 구축합니다.",
@@ -389,35 +394,7 @@ export default function Home() {
               필요한 제작 영역을 연결합니다.
             </p>
           </div>
-          <div className="service-grid">
-            {services.map((service) => (
-              <article className="service-card" key={service.code}>
-                <div className="service-overview">
-                  <div className="service-heading-line">
-                    <div className="service-icon">{service.code}</div>
-                    <span className="service-kicker">{service.kicker}</span>
-                  </div>
-                  <h3>{service.title}</h3>
-                  <p className="service-lead">{service.lead}</p>
-                </div>
-                <div className="service-detail">
-                  <p>{service.text}</p>
-                  <div className="service-scope-list">
-                    {service.groups.map((group) => (
-                      <div className="service-scope" key={group.label}>
-                        <strong>{group.label}</strong>
-                        <div className="tag-row">
-                          {group.tags.map((tag) => (
-                            <span key={tag}>{tag}</span>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <ServiceExplorer services={services} />
         </div>
       </section>
 

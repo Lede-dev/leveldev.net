@@ -68,6 +68,12 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /스트리머 서버/);
   assert.match(html, /서버 최적화/);
   assert.match(html, /콘텐츠 제작 파이프라인/);
+  assert.match(html, /class="service-explorer"/);
+  assert.match(html, /role="tablist"/);
+  assert.match(html, /data-icon="world"/);
+  assert.match(html, /data-icon="gameplay"/);
+  assert.match(html, /data-icon="creator"/);
+  assert.match(html, /data-icon="tech"/);
   assert.match(html, /한강서버/);
   assert.match(html, /이리와 운동회/);
   assert.match(html, /모징어 게임/);
