@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://leveldev.net"),
-  title: "LevelDev Inc. — 콘텐츠 기획·개발·운영",
+  title: "LevelDev Inc. — We Build Play for Everyone.",
   description:
-    "크리에이터, 브랜드, 플랫폼을 위한 콘텐츠 기획, 인터랙티브 개발, 기술 운영 서비스를 제공하는 콘텐츠 개발사 LevelDev Inc.입니다.",
+    "모든 플레이어를 위한 즐거운 경험을 기획하고 제작하며 운영하는 콘텐츠 개발사 LevelDev Inc.입니다.",
   keywords: [
     "콘텐츠 개발",
     "콘텐츠 제작",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     shortcut: "/symbol.svg",
   },
   openGraph: {
-    title: "LevelDev Inc. — We Build Content",
+    title: "LevelDev Inc. — We Build Play for Everyone.",
     description:
-      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 콘텐츠 개발사.",
+      "기획부터 제작, 기술 개발과 운영까지 모든 플레이어를 위한 즐거운 경험을 만듭니다.",
     type: "website",
     locale: "ko_KR",
     images: [
@@ -41,15 +41,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1734,
         height: 907,
-        alt: "LevelDev Inc. — Content Development Company",
+        alt: "LevelDev Inc. — We Build Play for Everyone.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LevelDev Inc. — We Build Content",
+    title: "LevelDev Inc. — We Build Play for Everyone.",
     description:
-      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 콘텐츠 개발사.",
+      "기획부터 제작, 기술 개발과 운영까지 모든 플레이어를 위한 즐거운 경험을 만듭니다.",
     images: ["/og.png"],
   },
 };

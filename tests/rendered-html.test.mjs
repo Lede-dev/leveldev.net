@@ -31,11 +31,12 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /<html lang="ko">/i);
   assert.match(
     html,
-    /<title>LevelDev Inc\. — 콘텐츠 기획·개발·운영<\/title>/i,
+    /<title>LevelDev Inc\. — We Build Play for Everyone\.<\/title>/i,
   );
   assert.match(html, /CONTENT DEVELOPMENT COMPANY/);
-  assert.match(html, /WE BUILD/);
-  assert.match(html, /CONTENT/);
+  assert.match(html, /WE BUILD PLAY/);
+  assert.match(html, /FOR EVERYONE\./);
+  assert.doesNotMatch(html, /WE BUILD CONTENT|WE BUILD WORLDS/);
   assert.match(html, /아이디어를 경험으로/);
   assert.match(html, /연결합니다/);
   assert.match(html, /10M<\/span><span class="stat-suffix">\+<\/span>/);

@@ -270,13 +270,13 @@ export default function Home() {
         <div className="container hero-content">
           <p className="eyebrow">CONTENT DEVELOPMENT COMPANY</p>
           <h1>
-            WE BUILD
-            <span>CONTENT</span>
+            <span className="hero-slogan-lead">WE BUILD PLAY</span>
+            <span className="hero-slogan-accent">FOR EVERYONE.</span>
           </h1>
           <p className="hero-copy">
             기획부터 제작, 기술 개발과 운영까지,
             <br />
-            아이디어를 오래 남는 콘텐츠 경험으로 만듭니다.
+            모든 플레이어를 위한 즐거운 경험을 만듭니다.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">
@@ -487,7 +487,7 @@ export default function Home() {
             <a className="brand" href="#top" aria-label="LevelDev 홈">
               <BrandLogo />
             </a>
-            <p>아이디어를 콘텐츠로, 콘텐츠를 경험으로.</p>
+            <p>WE BUILD PLAY FOR EVERYONE.</p>
             <div className="social-row">
               {socialLinks.map((social) => (
                 <a
