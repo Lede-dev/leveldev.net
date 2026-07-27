@@ -14,21 +14,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://leveldev-studio-home.lede-7716.chatgpt.site"),
-  title: "LevelDev Studio — 마인크래프트 콘텐츠 & 게임 개발",
+  title: "LevelDev Studio — 콘텐츠 기획·개발·운영",
   description:
-    "마인크래프트 맵, 플러그인·서버, 유튜브 콘텐츠와 독립 게임을 만드는 크리에이티브 스튜디오 LevelDev입니다.",
+    "크리에이터, 브랜드, 플랫폼을 위한 콘텐츠 기획, 인터랙티브 개발, 기술 운영 서비스를 제공하는 크리에이티브 스튜디오 LevelDev입니다.",
   keywords: [
-    "마인크래프트",
-    "마인크래프트 맵 제작",
-    "플러그인 개발",
+    "콘텐츠 개발",
+    "콘텐츠 제작",
+    "인터랙티브 콘텐츠",
     "게임 개발",
-    "유튜브 콘텐츠",
+    "크리에이터 콘텐츠",
+    "콘텐츠 서버",
     "LevelDev",
   ],
   openGraph: {
-    title: "LevelDev Studio — We Build Worlds",
+    title: "LevelDev Studio — We Build Content",
     description:
-      "마인크래프트 콘텐츠 제작부터 게임 개발까지, 픽셀 하나하나 세계를 만드는 크리에이티브 스튜디오.",
+      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 크리에이티브 스튜디오.",
     type: "website",
     locale: "ko_KR",
     images: [
@@ -36,15 +37,15 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1733,
         height: 908,
-        alt: "LevelDev Studio — Minecraft Content Studio",
+        alt: "LevelDev Studio — Content Development Studio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LevelDev Studio — We Build Worlds",
+    title: "LevelDev Studio — We Build Content",
     description:
-      "마인크래프트 콘텐츠 제작부터 게임 개발까지, 픽셀 하나하나 세계를 만드는 크리에이티브 스튜디오.",
+      "기획부터 제작, 기술 개발과 운영까지 콘텐츠의 전 과정을 함께하는 크리에이티브 스튜디오.",
     images: ["/og.png"],
   },
 };

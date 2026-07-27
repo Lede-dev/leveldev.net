@@ -8,31 +8,31 @@ const stats = [
 const partners = [
   {
     name: "이루",
-    category: "MINECRAFT CREATOR",
+    category: "CONTENT CREATOR",
     href: "https://www.youtube.com/@이루05",
     image: "/partners/iru.jpg",
   },
   {
     name: "셔니",
-    category: "MINECRAFT CREATOR",
+    category: "CONTENT CREATOR",
     href: "https://www.youtube.com/@수박머리_셔니",
     image: "/partners/seanyi.jpg",
   },
   {
     name: "블던",
-    category: "MINECRAFT CREATOR",
+    category: "CONTENT CREATOR",
     href: "https://www.youtube.com/@블던",
     image: "/partners/bluedun.jpg",
   },
   {
     name: "알지모",
-    category: "MINECRAFT CREATOR",
+    category: "CONTENT CREATOR",
     href: "https://www.youtube.com/@알지모",
     image: "/partners/algimo.jpg",
   },
   {
     name: "머땡",
-    category: "MINECRAFT CREATOR",
+    category: "CONTENT CREATOR",
     href: "https://www.youtube.com/@머땡",
     image: "/partners/meottaeng.jpg",
   },
@@ -47,27 +47,27 @@ const partners = [
 const services = [
   {
     code: "01",
-    title: "마인크래프트 맵 제작",
-    text: "서바이벌, 미니게임, 어드벤처, RPG까지 스토리와 빌딩이 어우러진 고품질 마인크래프트 월드를 설계하고 제작합니다.",
-    tags: ["SURVIVAL", "MINIGAME", "RPG"],
+    title: "콘텐츠 기획 & 제작",
+    text: "프로젝트의 목적과 타깃을 정의하고, 세계관·포맷·사용자 흐름을 설계해 실행 가능한 콘텐츠로 완성합니다.",
+    tags: ["STRATEGY", "FORMAT", "PRODUCTION"],
   },
   {
     code: "02",
-    title: "게임 개발",
-    text: "마인크래프트 플러그인·모드부터 독립 게임과 커스텀 서버까지, 아이디어를 안정적인 플레이 경험으로 구현합니다.",
-    tags: ["PLUGIN", "MOD", "SERVER"],
+    title: "인터랙티브 콘텐츠 개발",
+    text: "게임, 콘텐츠 서버, 참여형 이벤트 등 사용자가 직접 경험하는 콘텐츠를 안정적인 기술로 구현합니다.",
+    tags: ["GAME", "SERVER", "INTERACTIVE"],
   },
   {
     code: "03",
-    title: "콘텐츠 크리에이션",
-    text: "유튜브 영상, 쇼츠, 썸네일과 시리즈를 기획합니다. 채널의 방향 설정부터 촬영·편집까지 제작 전 과정을 지원합니다.",
-    tags: ["YOUTUBE", "SHORTS", "SERIES"],
+    title: "크리에이터 & 브랜드 콘텐츠",
+    text: "방송·영상·캠페인을 채널과 브랜드의 성격에 맞게 기획하며, 출연자와 시청자가 함께 즐기는 경험을 만듭니다.",
+    tags: ["CREATOR", "BRAND", "MEDIA"],
   },
   {
     code: "04",
-    title: "기술 개발 & 컨설팅",
-    text: "서버 인프라, 커스텀 봇, 자동화 시스템을 구축하고 마인크래프트와 게임 프로젝트에 필요한 기술 방향을 제안합니다.",
-    tags: ["INFRA", "BOT", "AUTOMATION"],
+    title: "기술 운영 & 컨설팅",
+    text: "프로젝트 인프라와 자동화 시스템을 구축하고, 출시 이후 운영·개선까지 지속 가능한 제작 환경을 지원합니다.",
+    tags: ["INFRA", "OPERATIONS", "CONSULTING"],
   },
 ];
 
@@ -141,55 +141,55 @@ const featuredVideo = {
 
 const notices = [
   {
-    date: "2025.04.20",
-    title: "Dragon's Keep 맵 v2.0 업데이트 출시",
-    category: "공지",
-    description: "새로운 던전, 추가 보스와 멀티플레이 개선을 포함한 대규모 업데이트를 공개했습니다.",
+    date: "ONGOING",
+    title: "콘텐츠 개발 프로젝트 상담 안내",
+    category: "안내",
+    description: "기획 초기 단계부터 제작, 기술 개발, 운영까지 프로젝트에 필요한 범위를 함께 설계합니다.",
   },
   {
-    date: "2025.04.15",
-    title: "주니어 빌더 / 콘텐츠 크리에이터 모집",
-    category: "채용",
-    description: "세계와 이야기를 함께 만들 창의적인 빌더와 콘텐츠 크리에이터를 찾고 있습니다.",
+    date: "ONGOING",
+    title: "기획·개발·디자인 파트너 상시 모집",
+    category: "협업",
+    description: "다양한 프로젝트를 함께 완성할 콘텐츠 기획자, 개발자, 디자이너의 제안을 기다립니다.",
   },
   {
-    date: "2025.04.08",
-    title: "스카이워즈 시즌 3 토너먼트 개최",
-    category: "이벤트",
-    description: "스카이워즈 서버 시즌 3를 기념하는 공식 토너먼트와 시상 프로그램을 진행합니다.",
+    date: "ONGOING",
+    title: "크리에이터·브랜드 파트너십 제안",
+    category: "파트너십",
+    description: "방송, 캠페인, 인터랙티브 콘텐츠를 함께 만들 크리에이터와 브랜드의 제안을 받습니다.",
   },
 ];
 
 const timeline = [
   {
     year: "2020",
-    title: "마인크래프트 맵 제작 팀으로 시작",
-    text: "첫 어드벤처 맵 ‘Shadow Keep’를 무료 배포하며 커뮤니티에 LevelDev의 이름을 알렸습니다.",
+    title: "콘텐츠 제작팀으로 시작",
+    text: "디지털 콘텐츠 제작과 커뮤니티 프로젝트를 시작하며 LevelDev의 첫 제작 경험을 쌓았습니다.",
   },
   {
     year: "2021",
-    title: "유튜브 채널 개설 · 구독자 10K",
-    text: "빌딩 타임랩스와 맵 소개 영상을 시작해 채널 개설 6개월 만에 구독자 1만 명을 달성했습니다.",
+    title: "크리에이터 협업 확대",
+    text: "스트리머·크리에이터와 함께 참여형 콘텐츠와 방송 프로젝트를 제작했습니다.",
   },
   {
     year: "2022",
-    title: "Dragon's Keep 첫 유료 출시",
-    text: "MCMarket에서 출시 첫 달 500카피를 판매하며 독창적인 월드 제작의 상업적 가능성을 확인했습니다.",
+    title: "인터랙티브 콘텐츠 개발",
+    text: "콘텐츠 기획에 게임·서버 개발 역량을 결합해 사용자가 직접 참여하는 경험을 만들었습니다.",
   },
   {
     year: "2023",
-    title: "전문 팀 확장 · 서버 사업 시작",
-    text: "전임 빌더 3명과 개발자 2명이 합류하고, 커스텀 서버 동시 접속자 1,000명을 기록했습니다.",
+    title: "제작·운영 체계 확장",
+    text: "기획, 디자인, 개발, 운영을 하나의 흐름으로 연결하는 협업 체계를 구축했습니다.",
   },
   {
     year: "2024",
-    title: "MCN 파트너십 · 구독자 50K",
-    text: "GameMCN과 파트너십을 체결하고 유튜브 구독자 5만 명, 누적 조회수 5,000만 뷰를 달성했습니다.",
+    title: "파트너 네트워크 강화",
+    text: "크리에이터와 기술 파트너 네트워크를 넓히며 더 큰 규모의 프로젝트를 지원했습니다.",
   },
   {
     year: "2025",
-    title: "마인크래프트를 넘어 새로운 IP로",
-    text: "독자 게임 IP 개발에 착수하고 국내 스튜디오 파트너들과 장기 프로젝트를 진행하고 있습니다.",
+    title: "콘텐츠 서비스 영역 확장",
+    text: "단발성 제작을 넘어 출시 이후 운영과 개선까지 제공하는 콘텐츠 스튜디오로 성장하고 있습니다.",
   },
 ];
 
@@ -229,22 +229,22 @@ export default function Home() {
         <div className="signal signal-b" aria-hidden="true" />
         <div className="signal signal-c" aria-hidden="true" />
         <div className="container hero-content">
-          <p className="eyebrow">MINECRAFT CONTENT STUDIO</p>
+          <p className="eyebrow">CONTENT DEVELOPMENT STUDIO</p>
           <h1>
             WE BUILD
-            <span>WORLDS</span>
+            <span>CONTENT</span>
           </h1>
           <p className="hero-copy">
-            마인크래프트 콘텐츠 제작부터 게임 개발까지,
+            기획부터 제작, 기술 개발과 운영까지,
             <br />
-            픽셀 하나하나 세계를 만드는 크리에이티브 스튜디오.
+            아이디어를 오래 남는 콘텐츠 경험으로 만듭니다.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">
               포트폴리오 보기 <span>↗</span>
             </a>
-            <a className="button button-ghost" href="#media">
-              유튜브 콘텐츠 <span>→</span>
+            <a className="button button-ghost" href="#services">
+              서비스 살펴보기 <span>→</span>
             </a>
           </div>
         </div>
@@ -258,18 +258,18 @@ export default function Home() {
           <div>
             <p className="eyebrow">OUR STORY</p>
             <h2 className="display-title">
-              픽셀로 세계를
+              기획부터 운영까지
               <br />
-              <span>빚는 스튜디오</span>
+              <span>연결하는 스튜디오</span>
             </h2>
             <p className="section-copy">
-              LevelDev는 마인크래프트 세계관을 바탕으로 고품질 콘텐츠와 게임을
-              만드는 전문 스튜디오입니다. 단순한 영상 제작을 넘어 플레이어가 직접
-              탐험하고 도전하는 세계를 설계합니다.
+              LevelDev는 크리에이터, 브랜드, 플랫폼의 아이디어를 실제 콘텐츠로
+              구현하는 개발 스튜디오입니다. 목적과 타깃을 정의하고 기획, 디자인,
+              개발, 운영을 하나의 흐름으로 연결합니다.
             </p>
             <p className="section-copy dim">
-              맵 하나에도 스토리를, 영상 하나에도 감동을 담습니다. 제작의 경계를
-              확장하며 플레이어와 시청자 모두에게 오래 기억되는 경험을 만듭니다.
+              게임과 스트리밍 생태계에서 쌓은 제작 경험을 바탕으로 참여형 콘텐츠,
+              인터랙티브 프로젝트, 기술 기반 서비스를 제공합니다.
             </p>
           </div>
           <div className="stat-grid">
@@ -291,7 +291,7 @@ export default function Home() {
             <h2>
               함께하는 <span>파트너</span>
             </h2>
-            <p>LevelDev와 함께 더 나은 마인크래프트 경험을 만드는 파트너입니다.</p>
+            <p>프로젝트의 가능성을 함께 확장하는 크리에이터와 기술 파트너입니다.</p>
           </div>
           <div className="partner-grid">
             {partners.map((partner) => (
@@ -349,9 +349,9 @@ export default function Home() {
             <h2>프로젝트</h2>
             <div className="filter-row" aria-label="프로젝트 분류">
               <span className="active">전체</span>
-              <span>맵</span>
-              <span>게임</span>
-              <span>콘텐츠</span>
+              <span>콘텐츠 서버</span>
+              <span>인터랙티브</span>
+              <span>크리에이터</span>
             </div>
           </div>
           <div className="project-grid">
@@ -475,7 +475,7 @@ export default function Home() {
             <h2>
               우리의 <span>발자취</span>
             </h2>
-            <p>2020년 작은 맵 제작 팀에서 시작해 더 넓은 세계를 만들고 있습니다.</p>
+            <p>콘텐츠 제작에서 서비스 운영까지, 프로젝트의 범위를 꾸준히 넓혀왔습니다.</p>
           </div>
           <div className="timeline">
             <div className="timeline-line" aria-hidden="true" />
@@ -498,19 +498,19 @@ export default function Home() {
           <div>
             <p className="eyebrow">CONTACT</p>
             <h2 className="display-title">
-              함께 만들어
+              필요한 콘텐츠를
               <br />
-              <span>가요</span>
+              <span>함께 만듭니다</span>
             </h2>
             <p className="section-copy">
-              프로젝트 의뢰, 협업 제안, 오픈소스 기여 또는 단순한 인사도
-              환영합니다. 가장 편한 채널로 LevelDev에 연락해 주세요.
+              콘텐츠 기획부터 제작, 기술 개발, 운영까지 필요한 범위를 함께
+              설계합니다. 프로젝트의 목표와 현재 고민을 들려주세요.
             </p>
             <div className="contact-points">
               {[
-                ["01", "Discord", "커뮤니티 서버에서 직접 대화"],
-                ["02", "이메일", "hello@leveldev.studio"],
-                ["03", "프로젝트", "맵·서버·콘텐츠 제작 협업"],
+                ["01", "기획", "아이디어·타깃·콘텐츠 구조 설계"],
+                ["02", "제작", "디자인·개발·프로덕션 실행"],
+                ["03", "운영", "출시·라이브 운영·지속 개선"],
               ].map(([no, title, desc]) => (
                 <div key={no}>
                   <span>{no}</span>
@@ -529,20 +529,20 @@ export default function Home() {
             <p>NOW HIRING</p>
             <h3>팀에 합류하세요</h3>
             <p>
-              LevelDev와 함께 세계를 만들 크리에이터, 개발자, 빌더를 찾습니다.
-              경험보다 열정을, 결과만큼 만드는 과정을 중요하게 생각합니다.
+              LevelDev와 함께 콘텐츠를 만들 기획자, 개발자, 디자이너, 크리에이터를
+              찾습니다. 결과만큼 만드는 과정과 협업을 중요하게 생각합니다.
             </p>
             <ul>
               <li>
-                <span>마인크래프트 빌더</span>
+                <span>콘텐츠 기획자</span>
                 <strong>모집 중</strong>
               </li>
               <li>
-                <span>플러그인 개발자</span>
+                <span>인터랙티브 개발자</span>
                 <strong>모집 중</strong>
               </li>
               <li>
-                <span>콘텐츠 크리에이터</span>
+                <span>콘텐츠 디자이너</span>
                 <strong>모집 중</strong>
               </li>
               <li>
@@ -564,7 +564,7 @@ export default function Home() {
               <Mark />
               <span>LEVELDEV</span>
             </a>
-            <p>픽셀 하나하나, 세계를 만드는 스튜디오.</p>
+            <p>아이디어를 콘텐츠로, 콘텐츠를 경험으로.</p>
             <div className="social-row">
               <a href="#media" aria-label="유튜브 콘텐츠">
                 YT
@@ -600,7 +600,7 @@ export default function Home() {
         </div>
         <div className="container footer-bottom">
           <span>© 2025 LEVELDEV STUDIO. ALL RIGHTS RESERVED.</span>
-          <span>모든 세계는 픽셀에서 시작됩니다.</span>
+          <span>모든 콘텐츠는 좋은 질문에서 시작됩니다.</span>
         </div>
       </footer>
     </main>

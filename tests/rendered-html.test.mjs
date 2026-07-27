@@ -22,7 +22,7 @@ async function render(pathname = "/") {
   );
 }
 
-test("server-renders the LevelDev Minecraft studio landing page", async () => {
+test("server-renders the LevelDev content development studio landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -31,10 +31,12 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   assert.match(html, /<html lang="ko">/i);
   assert.match(
     html,
-    /<title>LevelDev Studio — 마인크래프트 콘텐츠 &amp; 게임 개발<\/title>/i,
+    /<title>LevelDev Studio — 콘텐츠 기획·개발·운영<\/title>/i,
   );
-  assert.match(html, /MINECRAFT CONTENT STUDIO/);
-  assert.match(html, /픽셀로 세계를/);
+  assert.match(html, /CONTENT DEVELOPMENT STUDIO/);
+  assert.match(html, /WE BUILD/);
+  assert.match(html, /CONTENT/);
+  assert.match(html, /기획부터 운영까지/);
   assert.match(html, /10M\+/);
   assert.match(html, /누적 콘텐츠 조회수/);
   assert.match(html, /완료 작업/);
@@ -47,7 +49,8 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   assert.match(html, /Stella IT/);
   assert.match(html, /\/partners\/iru\.jpg/);
   assert.match(html, /https:\/\/stella-it\.com\//);
-  assert.match(html, /마인크래프트 맵 제작/);
+  assert.match(html, /콘텐츠 기획 &amp; 제작/);
+  assert.match(html, /인터랙티브 콘텐츠 개발/);
   assert.match(html, /한강서버/);
   assert.match(html, /이리와 운동회/);
   assert.match(html, /모징어 게임/);
@@ -60,7 +63,7 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);
   assert.match(html, /youtube\.com\/watch\?v=0PJj4ETImRQ/);
   assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
-  assert.match(html, /누적 조회수 5,000만 뷰/);
+  assert.match(html, /콘텐츠 서비스 영역 확장/);
   assert.match(html, /mailto:jobs@leveldev\.studio/);
   assert.doesNotMatch(html, /github\.com|LedeStudios|GitHub/);
 });
