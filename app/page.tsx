@@ -2,8 +2,8 @@ import ProjectCarousel from "./components/project-carousel";
 import VideoShowcase from "./components/video-showcase";
 
 const stats = [
-  { value: "10+", label: "완료 작업" },
   { value: "10M+", label: "누적 콘텐츠 조회수" },
+  { value: "10+", label: "완료 작업" },
   { value: "5년+", label: "콘텐츠 개발 경력" },
   { value: "10+", label: "파트너십" },
 ];
@@ -260,27 +260,26 @@ export default function Home() {
 
       <section className="about section" id="about">
         <div className="container about-grid">
-          <div>
-            <p className="eyebrow">OUR STORY</p>
-            <h2 className="display-title">
-              기획부터 운영까지
-              <br />
-              <span>연결하는 콘텐츠 기업</span>
-            </h2>
-            <p className="section-copy">
-              LevelDev Inc.는 크리에이터, 브랜드, 플랫폼의 아이디어를 실제
-              콘텐츠로 구현하는 콘텐츠 개발사입니다. 목적과 타깃을 정의하고
-              기획, 디자인, 개발, 운영을 하나의 흐름으로 연결합니다.
-            </p>
-            <p className="section-copy dim">
-              게임과 스트리밍 생태계에서 쌓은 제작 경험을 바탕으로 참여형 콘텐츠,
-              인터랙티브 프로젝트, 기술 기반 서비스를 제공합니다.
+          <div className="about-intro">
+            <div>
+              <p className="eyebrow">OUR STORY</p>
+              <h2 className="display-title">
+                아이디어를 경험으로
+                <br />
+                <span>연결합니다</span>
+              </h2>
+            </div>
+            <p className="about-summary">
+              LevelDev Inc.는 기획·개발·운영을 하나로 연결해 크리에이터와
+              브랜드의 아이디어를 참여형 콘텐츠와 기술 기반 서비스로 구현합니다.
             </p>
           </div>
           <div className="stat-grid">
-            {stats.map((stat) => (
-              <article className="stat-card" key={stat.label}>
-                <span className="stat-icon">⌁</span>
+            {stats.map((stat, index) => (
+              <article
+                className={`stat-card${index === 0 ? " featured" : ""}`}
+                key={stat.label}
+              >
                 <strong>{stat.value}</strong>
                 <small>{stat.label}</small>
               </article>
