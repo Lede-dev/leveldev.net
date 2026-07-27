@@ -557,48 +557,89 @@ a {
   background: #030604;
 }
 
+.services .section-heading {
+  margin-bottom: 48px;
+}
+
+.section-heading > .services-intro {
+  max-width: 880px;
+  margin: 20px auto 0;
+  font-size: 17px;
+  line-height: 1.72;
+  word-break: keep-all;
+}
+
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
 .service-card {
   position: relative;
-  min-height: 286px;
-  padding: 28px 25px 25px;
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(290px, 0.8fr) minmax(0, 1.45fr);
+  min-height: 310px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: #050806;
   transition:
-    transform 200ms ease,
+    background 200ms ease,
     border-color 200ms ease;
+}
+
+.service-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 2px;
+  background: var(--lime);
+  content: "";
+  opacity: 0;
+  transition: opacity 200ms ease;
 }
 
 .service-card:hover {
   z-index: 1;
   border-color: rgba(132, 240, 0, 0.35);
-  transform: translateY(-7px);
+  background: #060b07;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-overview {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 38px;
+  border-right: 1px solid var(--line);
+}
+
+.service-heading-line {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .service-icon {
   display: grid;
-  width: 46px;
-  height: 46px;
-  margin-bottom: 36px;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
   place-items: center;
   color: var(--lime);
   background: rgba(132, 240, 0, 0.08);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 13px;
+  font-size: 14px;
 }
 
-.service-phase {
-  position: absolute;
-  top: 37px;
-  right: 26px;
-  color: #667067;
+.service-kicker {
+  color: #788179;
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
   font-weight: 650;
@@ -606,40 +647,88 @@ a {
   transition: color 200ms ease;
 }
 
-.service-card:hover .service-phase {
+.service-card:hover .service-kicker {
   color: rgba(132, 240, 0, 0.7);
 }
 
 .service-card h3,
 .notice-grid h3 {
   margin: 0;
-  font-size: 20px;
   font-weight: 650;
 }
 
-.service-card > p {
-  min-height: 82px;
-  margin: 13px 0 0;
-  color: #899289;
-  font-size: 14px;
+.service-card h3 {
+  margin-top: 30px;
+  font-size: 26px;
+  letter-spacing: -0.045em;
+}
+
+.notice-grid h3 {
+  font-size: 20px;
+}
+
+.service-lead {
+  margin: 16px 0 0;
+  color: #b0bab1;
+  font-size: 16px;
   line-height: 1.65;
   word-break: keep-all;
+}
+
+.service-detail {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 40px;
+}
+
+.service-detail > p {
+  max-width: 850px;
+  margin: 0;
+  color: #9ba49c;
+  font-size: 16px;
+  line-height: 1.78;
+  word-break: keep-all;
+}
+
+.service-scope-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.service-scope {
+  display: grid;
+  grid-template-columns: 155px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+}
+
+.service-scope > strong {
+  padding-top: 7px;
+  color: rgba(132, 240, 0, 0.76);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .tag-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 17px;
+  gap: 6px;
+  margin: 0;
 }
 
 .tag-row span {
-  padding: 6px 8px;
-  border: 1px solid #161e17;
-  color: #7f897f;
+  padding: 7px 9px;
+  border: 1px solid #19211a;
+  color: #919a92;
+  background: rgba(255, 255, 255, 0.012);
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
-  letter-spacing: 0.04em;
+  letter-spacing: -0.01em;
 }
 
 .project-carousel {
@@ -1608,6 +1697,11 @@ footer {
     font-size: 17px;
   }
 
+  .section-heading > .services-intro {
+    max-width: 980px;
+    font-size: 19px;
+  }
+
   .stat-card {
     min-height: 198px;
     padding: 34px;
@@ -1647,35 +1741,48 @@ footer {
   }
 
   .service-card {
-    min-height: 324px;
-    padding: 32px 29px 29px;
+    grid-template-columns: minmax(350px, 0.78fr) minmax(0, 1.5fr);
+    min-height: 360px;
   }
 
   .service-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 40px;
+    width: 56px;
+    height: 56px;
     font-size: 15px;
   }
 
-  .service-phase {
-    top: 42px;
-    right: 29px;
+  .service-kicker {
     font-size: 12px;
   }
 
   .service-card h3 {
-    font-size: 23px;
+    font-size: 31px;
   }
 
-  .service-card > p {
-    min-height: 90px;
-    font-size: 16px;
+  .service-lead,
+  .service-detail > p {
+    font-size: 18px;
+  }
+
+  .service-overview {
+    padding: 42px 44px;
+  }
+
+  .service-detail {
+    padding: 42px 46px;
+  }
+
+  .service-scope {
+    grid-template-columns: 175px minmax(0, 1fr);
+  }
+
+  .service-scope > strong {
+    font-size: 12px;
   }
 
   .tag-row span {
-    padding: 7px 9px;
-    font-size: 12px;
+    padding: 8px 10px;
+    font-size: 13px;
   }
 
   .project-card {
@@ -1865,9 +1972,21 @@ footer {
     border-top: 1px solid var(--line);
   }
 
-  .service-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
   .notice-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    grid-template-columns: 1fr;
+  }
+
+  .service-overview {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .project-slide {
@@ -2033,7 +2152,36 @@ footer {
   }
 
   .service-card {
-    min-height: 250px;
+    min-height: 0;
+  }
+
+  .section-heading > .services-intro {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+
+  .service-overview,
+  .service-detail {
+    padding: 28px 24px;
+  }
+
+  .service-card h3 {
+    margin-top: 24px;
+    font-size: 24px;
+  }
+
+  .service-lead,
+  .service-detail > p {
+    font-size: 15px;
+  }
+
+  .service-scope {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .service-scope > strong {
+    padding-top: 0;
   }
 
   .project-card {

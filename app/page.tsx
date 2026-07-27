@@ -50,31 +50,79 @@ const partners = [
 const services = [
   {
     code: "01",
-    phase: "PLAN",
-    title: "전략 기획 & 프로덕션",
-    text: "목적과 타깃을 정리하고, 세계관·포맷·사용자 여정을 설계해 제작 가능한 실행안과 결과물로 연결합니다.",
-    tags: ["STRATEGY", "FORMAT", "PRODUCTION"],
+    kicker: "WORLD & ASSETS",
+    title: "월드·맵 & 아트 리소스 제작",
+    lead: "게임과 콘텐츠에 필요한 공간과 시각 자산을 제작합니다.",
+    text: "콘셉트와 플레이 흐름에 맞춰 월드와 맵, 지형, 건축물, 이벤트 공간을 설계하고 2D·3D 리소스를 제작합니다. 마인크래프트를 포함한 다양한 게임과 콘텐츠 환경에 맞춰 공간의 기능과 시각적 완성도를 함께 설계합니다.",
+    groups: [
+      {
+        label: "마인크래프트",
+        tags: ["지형", "모든 크기", "레벨 디자인", "인테리어", "BE", "JE", "모든 버전"],
+      },
+      {
+        label: "게임·콘텐츠 전반",
+        tags: ["맵", "레벨 디자인", "2D 리소스", "3D 리소스"],
+      },
+    ],
   },
   {
     code: "02",
-    phase: "BUILD",
-    title: "인터랙티브 경험 개발",
-    text: "게임, 콘텐츠 서버, 참여형 이벤트 등 사용자가 직접 움직이고 반응하는 경험을 안정적인 기술로 구현합니다.",
-    tags: ["GAME", "SERVER", "INTERACTIVE"],
+    kicker: "GAMEPLAY & SYSTEMS",
+    title: "게임플레이 & 시스템 개발",
+    lead: "기획된 규칙과 상호작용을 실제로 플레이 가능한 기능으로 구현합니다.",
+    text: "마인크래프트에서는 플러그인과 모드를 활용해 콘텐츠 규칙, 시스템, 상호작용을 개발합니다. 그 외 프로젝트에서는 Unreal과 Godot을 기반으로 2D·3D 게임과 플레이 가능한 콘텐츠를 구현합니다.",
+    groups: [
+      {
+        label: "마인크래프트",
+        tags: ["플러그인", "모드", "서버 콘텐츠 시스템"],
+      },
+      {
+        label: "게임 개발",
+        tags: ["Unreal", "Godot", "2D", "3D", "Mobile", "Desktop"],
+      },
+    ],
   },
   {
     code: "03",
-    phase: "CONNECT",
-    title: "크리에이터 & 브랜드 캠페인",
-    text: "크리에이터와 브랜드의 목소리를 살린 방송·영상·캠페인을 기획해 사람과 채널이 만나는 접점을 만듭니다.",
-    tags: ["CREATOR", "BRAND", "MEDIA"],
+    kicker: "CREATOR CONTENT",
+    title: "크리에이터 콘텐츠 제작",
+    lead: "방송과 영상에서 활용할 수 있는 참여형 콘텐츠를 만듭니다.",
+    text: "마인크래프트 스트리머 서버뿐 아니라 크리에이터와 브랜드의 아이디어를 기반으로 방송, 촬영, 참여형 이벤트와 유튜브 콘텐츠에 적합한 경험을 기획하고 제작합니다.",
+    groups: [
+      {
+        label: "마인크래프트 콘텐츠",
+        tags: ["스트리머 서버", "참여형 서버", "방송 이벤트"],
+      },
+      {
+        label: "크리에이터 콘텐츠",
+        tags: ["방송용 콘텐츠", "유튜브용 콘텐츠", "참여형 이벤트"],
+      },
+      {
+        label: "지원 플랫폼",
+        tags: ["치지직", "SOOP", "씨미"],
+      },
+    ],
   },
   {
     code: "04",
-    phase: "OPERATE",
-    title: "기술 운영 & 성장 지원",
-    text: "인프라와 자동화, 라이브 운영 체계를 구축하고 데이터와 피드백을 바탕으로 출시 이후 개선을 지원합니다.",
-    tags: ["INFRA", "OPERATIONS", "CONSULTING"],
+    kicker: "TECH & OPERATIONS",
+    title: "기술 개발 & 운영 지원",
+    lead: "콘텐츠가 안정적으로 제작되고 서비스되도록 기술 기반을 구축합니다.",
+    text: "마인크래프트 서버와 런처 개발부터 게임 및 콘텐츠 프로젝트의 자동화, 운영 환경, 제작 파이프라인까지 필요한 기술 구조를 제안하고 개발합니다. 기획과 프로젝트 관리, 출시 이후 운영도 함께 지원합니다.",
+    groups: [
+      {
+        label: "마인크래프트 기술",
+        tags: ["서버 최적화", "마인크래프트 런처", "서버 운영"],
+      },
+      {
+        label: "기술 개발",
+        tags: ["자동화", "콘텐츠 제작 파이프라인", "운영 시스템"],
+      },
+      {
+        label: "프로젝트 지원",
+        tags: ["기획", "프로젝트 관리", "기술 컨설팅", "유지보수"],
+      },
+    ],
   },
 ];
 
@@ -333,18 +381,37 @@ export default function Home() {
           <div className="section-heading centered">
             <p className="eyebrow">SERVICES</p>
             <h2>우리가 하는 일</h2>
+            <p className="services-intro">
+              마인크래프트 BE·JE 콘텐츠부터 Unreal·Godot 기반 게임,
+              2D·3D 리소스, 크리에이터 콘텐츠와 운영 기술까지 프로젝트에
+              필요한 제작 영역을 연결합니다.
+            </p>
           </div>
           <div className="service-grid">
             {services.map((service) => (
               <article className="service-card" key={service.code}>
-                <div className="service-icon">{service.code}</div>
-                <span className="service-phase">{service.phase}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-                <div className="tag-row">
-                  {service.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+                <div className="service-overview">
+                  <div className="service-heading-line">
+                    <div className="service-icon">{service.code}</div>
+                    <span className="service-kicker">{service.kicker}</span>
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p className="service-lead">{service.lead}</p>
+                </div>
+                <div className="service-detail">
+                  <p>{service.text}</p>
+                  <div className="service-scope-list">
+                    {service.groups.map((group) => (
+                      <div className="service-scope" key={group.label}>
+                        <strong>{group.label}</strong>
+                        <div className="tag-row">
+                          {group.tags.map((tag) => (
+                            <span key={tag}>{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
