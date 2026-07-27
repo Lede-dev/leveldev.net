@@ -125,6 +125,7 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /\/symbol\.svg/);
   assert.doesNotMatch(html, /<span>LEVELDEV<\/span>/);
   assert.match(html, /class="media-showcase"/);
+  assert.match(html, /data-autoplay="playing"/);
   assert.match(
     html,
     /class="video-stage"[\s\S]*?\/videos\/hangang-server\.jpg[\s\S]*?김용찬[\s\S]*?2026\.05\.24/,

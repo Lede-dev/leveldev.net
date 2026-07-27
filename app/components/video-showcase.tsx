@@ -22,11 +22,14 @@ type VideoShowcaseProps = {
   channelHref: string;
 };
 
+const AUTO_ADVANCE_INTERVAL = 7000;
+
 export default function VideoShowcase({
   videos,
   channelHref,
 }: VideoShowcaseProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const [canScrollBack, setCanScrollBack] = useState(false);
   const [canScrollForward, setCanScrollForward] = useState(false);
   const queueRef = useRef<HTMLDivElement>(null);
@@ -42,6 +45,22 @@ export default function VideoShowcase({
         .filter(({ index }) => index !== activeIndex),
     [activeIndex, sortedVideos],
   );
+
+  useEffect(() => {
+    if (
+      isPaused ||
+      sortedVideos.length < 2 ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      setActiveIndex((current) => (current + 1) % sortedVideos.length);
+    }, AUTO_ADVANCE_INTERVAL);
+
+    return () => window.clearTimeout(timer);
+  }, [activeIndex, isPaused, sortedVideos.length]);
 
   const updateQueueControls = useCallback(() => {
     const queue = queueRef.current;
@@ -79,7 +98,18 @@ export default function VideoShowcase({
   if (!activeVideo) return null;
 
   return (
-    <div className="media-showcase">
+    <div
+      className="media-showcase"
+      data-autoplay={isPaused ? "paused" : "playing"}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setIsPaused(false);
+        }
+      }}
+    >
       <div className="video-stage">
         <a
           className="video-stage-media"
@@ -87,16 +117,19 @@ export default function VideoShowcase({
           target="_blank"
           rel="noreferrer"
           aria-label={`${activeVideo.title} YouTube에서 보기`}
-          >
-            <img
-              src={activeVideo.image}
-              alt=""
-              width="1280"
-              height="720"
-            />
+        >
+          <img
+            src={activeVideo.image}
+            alt=""
+            width="1280"
+            height="720"
+          />
         </a>
 
-        <div className="video-stage-info" aria-live="polite">
+        <div
+          className="video-stage-info"
+          aria-live={isPaused ? "polite" : "off"}
+        >
           <p className="video-kicker">SELECTED VIDEO</p>
           <div className="video-byline">
             <strong>{activeVideo.author}</strong>
