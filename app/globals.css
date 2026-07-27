@@ -667,28 +667,34 @@ a {
   z-index: 2;
   margin: 0 -25px -25px;
   padding: 23px 25px 25px;
-  border-top: 1px solid rgba(132, 240, 0, 0.08);
-  background: linear-gradient(180deg, rgba(2, 4, 3, 0.56), rgba(2, 4, 3, 0.94));
-  backdrop-filter: blur(9px);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 4, 3, 0.08),
+    rgba(2, 4, 3, 0.64) 42%,
+    rgba(2, 4, 3, 0.82)
+  );
 }
 
 .project-meta h3 {
   margin: 0;
   font-family: var(--font-geist-mono), var(--font-geist-sans), sans-serif;
   font-size: 19px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
 }
 
 .project-meta p {
   margin: 10px 0 18px;
-  color: #a0a9a0;
+  color: #c0c8bf;
   font-size: 13px;
   line-height: 1.58;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.95);
 }
 
 .project-link {
-  color: #737e74;
+  color: #98a198;
   font-family: var(--font-geist-mono), monospace;
   font-size: 10px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95);
 }
 
 .videos {
