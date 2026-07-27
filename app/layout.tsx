@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://leveldev-studio-home.lede-7716.chatgpt.site"),
   title: "LevelDev — We Build Worlds",
   description:
     "게임과 가상 공간을 만드는 인터랙티브 콘텐츠 스튜디오 LevelDev입니다.",

@@ -47,5 +47,8 @@ test("ships finished metadata without starter preview markers", async () => {
   assert.match(html, /property="og:title"/i);
   assert.match(html, /property="og:image"/i);
   assert.match(html, /name="twitter:card" content="summary_large_image"/i);
-  assert.match(html, /content="http:\/\/localhost:3000\/og\.png"/i);
+  assert.match(
+    html,
+    /content="https:\/\/leveldev-studio-home\.lede-7716\.chatgpt\.site\/og\.png"/i,
+  );
 });
