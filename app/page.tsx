@@ -79,7 +79,8 @@ const projects = [
     date: "2026.04",
     platform: "CHZZK",
     description: "치지직 스트리머를 위해 기획·개발한 콘텐츠 서버입니다.",
-    image: "/projects/hangang-server.jpg",
+    image: "/projects/hangang-server.png",
+    imageFit: "contain",
   },
   {
     no: "02",
@@ -88,7 +89,8 @@ const projects = [
     date: "2025.09",
     platform: "CHZZK",
     description: "치지직 스트리머들이 함께 즐길 수 있도록 제작한 운동회 콘텐츠 서버입니다.",
-    image: "/projects/iriwa-sports-day.jpg",
+    image: "/projects/iriwa-sports-day.png",
+    imageFit: "cover",
   },
   {
     no: "03",
@@ -97,7 +99,8 @@ const projects = [
     date: "2025.07",
     platform: "ALL PLATFORM",
     description: "모든 플랫폼의 대규모 스트리머와 유튜버가 참여한 콘텐츠 서버입니다.",
-    image: "/projects/mojingeo-game.jpg",
+    image: "/projects/mojingeo-game.png",
+    imageFit: "cover",
   },
   {
     no: "04",
@@ -106,7 +109,8 @@ const projects = [
     date: "2026.05",
     platform: "SOOP",
     description: "SOOP 블루점프 멤버 전용으로 설계한 원블럭 콘텐츠 서버입니다.",
-    image: null,
+    image: "/projects/bluejump-oneblock.png",
+    imageFit: "cover",
   },
 ];
 
@@ -116,14 +120,14 @@ const videos = [
     meta: "2.8천 조회 · 2026.05.24",
     author: "김용찬",
     href: "https://www.youtube.com/watch?v=UNk70G0rAS0&t=2s",
-    image: "/projects/hangang-server.jpg",
+    image: "/videos/hangang-server.jpg",
   },
   {
     title: "하꼬가 치지직지원을 받았다고? 😲🫢 | 이리와 운동회",
     meta: "2.3천 조회 · 2025.10.11",
     author: "유이리",
     href: "https://www.youtube.com/watch?v=0PJj4ETImRQ&t=30s",
-    image: "/projects/iriwa-sports-day.jpg",
+    image: "/videos/iriwa-sports-day.jpg",
   },
 ];
 
@@ -132,7 +136,7 @@ const featuredVideo = {
   meta: "18.7만 조회 · 2025.07.27",
   author: "블루맥스",
   href: "https://www.youtube.com/watch?v=I04NY35EDlg&t=26s",
-  image: "/projects/mojingeo-game.jpg",
+  image: "/videos/mojingeo-game.jpg",
 };
 
 const notices = [
@@ -355,7 +359,7 @@ export default function Home() {
               <article className="project-card" key={project.no}>
                 {project.image ? (
                   <img
-                    className="project-image"
+                    className={`project-image${project.imageFit === "contain" ? " contain" : ""}`}
                     src={project.image}
                     alt={`${project.title} 프로젝트`}
                     width="640"

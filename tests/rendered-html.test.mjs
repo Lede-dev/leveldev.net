@@ -53,7 +53,9 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   assert.match(html, /모징어 게임/);
   assert.match(html, /블루점프 원블럭/);
   assert.match(html, /대월향 &amp; 블루점프/);
-  assert.match(html, /\/projects\/hangang-server\.jpg/);
+  assert.match(html, /\/projects\/hangang-server\.png/);
+  assert.match(html, /\/projects\/bluejump-oneblock\.png/);
+  assert.match(html, /\/videos\/mojingeo-game\.jpg/);
   assert.match(html, /youtube\.com\/watch\?v=I04NY35EDlg/);
   assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);
   assert.match(html, /youtube\.com\/watch\?v=0PJj4ETImRQ/);
