@@ -2,6 +2,7 @@ import ProjectCarousel from "./components/project-carousel";
 import ServiceExplorer from "./components/service-explorer";
 import VideoShowcase from "./components/video-showcase";
 import NoticeCarousel from "./components/notice-carousel";
+import SiteInteractions from "./components/site-interactions";
 import { notices } from "./data/notices";
 
 const stats = [
@@ -247,6 +248,7 @@ function BrandLogo() {
 export default function Home() {
   return (
     <main>
+      <SiteInteractions />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="LevelDev 홈">
           <BrandLogo />

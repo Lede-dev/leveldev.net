@@ -34,6 +34,7 @@ test("server-renders the LevelDev Inc. content development company landing page"
     /<title>LevelDev Inc\. — We Build Play for Everyone\.<\/title>/i,
   );
   assert.match(html, /CONTENT DEVELOPMENT COMPANY/);
+  assert.match(html, /class="site-progress"/);
   assert.match(html, />WE<\/span><span>BUILD<\/span><span>PLAY<\/span>/);
   assert.match(html, />FOR<\/span><span>EVERYONE\.<\/span>/);
   assert.doesNotMatch(html, /WE BUILD CONTENT|WE BUILD WORLDS/);
