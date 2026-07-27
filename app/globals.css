@@ -698,12 +698,15 @@ a {
   gap: clamp(44px, 5vw, 84px);
   margin-top: 34px;
   padding: 34px 0 4px;
-  background:
-    radial-gradient(circle at 0 50%, rgba(132, 240, 0, 0.045), transparent 34%);
 }
 
 .service-panel[hidden] {
   display: none;
+}
+
+.service-panel-copy {
+  padding-left: 20px;
+  border-left: 1px solid #1b241c;
 }
 
 .notice-grid h3 {
