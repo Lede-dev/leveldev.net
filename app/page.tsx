@@ -1,6 +1,8 @@
 import ProjectCarousel from "./components/project-carousel";
 import ServiceExplorer from "./components/service-explorer";
 import VideoShowcase from "./components/video-showcase";
+import NoticeCarousel from "./components/notice-carousel";
+import { notices } from "./data/notices";
 
 const stats = [
   { value: "10M", suffix: "+", label: "누적 콘텐츠 조회수" },
@@ -227,27 +229,6 @@ const socialLinks = [
   },
 ];
 
-const notices = [
-  {
-    date: "ONGOING",
-    title: "콘텐츠 개발 프로젝트 상담 안내",
-    category: "안내",
-    description: "기획 초기 단계부터 제작, 기술 개발, 운영까지 프로젝트에 필요한 범위를 함께 설계합니다.",
-  },
-  {
-    date: "ONGOING",
-    title: "기획·개발·디자인 파트너 상시 모집",
-    category: "협업",
-    description: "다양한 프로젝트를 함께 완성할 콘텐츠 기획자, 개발자, 디자이너의 제안을 기다립니다.",
-  },
-  {
-    date: "ONGOING",
-    title: "크리에이터·브랜드 파트너십 제안",
-    category: "파트너십",
-    description: "방송, 캠페인, 인터랙티브 콘텐츠를 함께 만들 크리에이터와 브랜드의 제안을 받습니다.",
-  },
-];
-
 export const dynamic = "force-static";
 
 function BrandLogo() {
@@ -423,19 +404,7 @@ export default function Home() {
             </div>
             <a href="#contact">문의하기 →</a>
           </div>
-          <div className="notice-grid">
-            {notices.map((item) => (
-              <article key={item.title}>
-                <div>
-                  <span>{item.category}</span>
-                  <time>{item.date}</time>
-                </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <b>LEVELDEV NEWS ↗</b>
-              </article>
-            ))}
-          </div>
+          <NoticeCarousel notices={notices} />
         </div>
       </section>
 

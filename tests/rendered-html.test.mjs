@@ -114,6 +114,16 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /youtube\.com\/watch\?v=0PJj4ETImRQ/);
   assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
   assert.match(html, /mailto:contact@leveldev\.net/);
+  assert.match(html, /class="notice-carousel"/);
+  assert.match(html, /class="notice-track"/);
+  assert.match(html, /aria-label="이전 공지사항 보기"/);
+  assert.match(html, /aria-label="다음 공지사항 보기"/);
+  assert.match(html, /href="\/news\/project-consulting"/);
+  assert.match(html, /href="\/news\/creative-partners"/);
+  assert.match(html, /href="\/news\/creator-brand-partnership"/);
+  assert.match(html, /lucide-message-square-text/);
+  assert.match(html, /lucide-users-round/);
+  assert.match(html, /lucide-handshake/);
   assert.match(html, /https:\/\/discord\.gg\/49HEWTA/);
   assert.match(html, /youtube\.com\/channel\/UCYRR-uYiex4Cx7IIIwFlEpg/);
   assert.match(html, /https:\/\/github\.com\/leveldevinc/);
@@ -145,6 +155,26 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.doesNotMatch(html, /brand-mark|채널 구독 문의/);
   assert.doesNotMatch(html, /filter-row|project-number|id="history"|HISTORY/);
   assert.doesNotMatch(html, /hello@leveldev\.studio|LedeStudios/);
+});
+
+test("serves each notice as a dedicated static detail page", async () => {
+  const detailPages = [
+    ["/news/project-consulting", "콘텐츠 개발 프로젝트 상담 안내"],
+    ["/news/creative-partners", "기획·개발·디자인 파트너 상시 모집"],
+    [
+      "/news/creator-brand-partnership",
+      "크리에이터·브랜드 파트너십 제안",
+    ],
+  ];
+
+  for (const [pathname, title] of detailPages) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    assert.match(html, new RegExp(title));
+    assert.match(html, /공지사항으로 돌아가기/);
+    assert.match(html, /mailto:contact@leveldev\.net/);
+  }
 });
 
 test("ships finished metadata without starter preview markers", async () => {
