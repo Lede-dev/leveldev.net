@@ -82,6 +82,12 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /\/icons\/youtube\.svg/);
   assert.match(html, /\/icons\/github\.svg/);
   assert.match(html, /\/icons\/mail\.svg/);
+  assert.match(html, /\/logo\.svg/);
+  assert.match(html, /class="media-showcase"/);
+  assert.match(html, /SELECTED VIDEO/);
+  assert.match(html, /NEXT VIDEOS/);
+  assert.match(html, /YouTube 채널에서 더 보기/);
+  assert.doesNotMatch(html, /brand-mark|채널 구독 문의/);
   assert.doesNotMatch(html, /filter-row|project-number|id="history"|HISTORY/);
   assert.doesNotMatch(html, /hello@leveldev\.studio|LedeStudios/);
 });

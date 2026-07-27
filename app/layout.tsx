@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "콘텐츠 서버",
     "LevelDev",
   ],
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+  },
   openGraph: {
     title: "LevelDev Studio — We Build Content",
     description:

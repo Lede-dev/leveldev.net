@@ -1,4 +1,5 @@
 import ProjectCarousel from "./components/project-carousel";
+import VideoShowcase from "./components/video-showcase";
 
 const stats = [
   { value: "10+", label: "완료 작업" },
@@ -195,12 +196,16 @@ const notices = [
 
 export const dynamic = "force-static";
 
-function Mark() {
+function BrandLogo() {
   return (
-    <span className="brand-mark" aria-hidden="true">
-      <span />
-      <span />
-    </span>
+    <img
+      className="brand-logo"
+      src="/logo.svg"
+      alt=""
+      width="24"
+      height="22"
+      aria-hidden="true"
+    />
   );
 }
 
@@ -209,7 +214,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="LevelDev 홈">
-          <Mark />
+          <BrandLogo />
           <span>LEVELDEV</span>
         </a>
         <nav aria-label="주요 메뉴">
@@ -359,58 +364,10 @@ export default function Home() {
             <p className="eyebrow">MEDIA</p>
             <h2>최근 영상</h2>
           </div>
-          <div className="video-layout">
-            <a
-              className="featured-video"
-              href={featuredVideo.href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${featuredVideo.title} YouTube에서 보기`}
-            >
-              <img
-                className="video-cover"
-                src={featuredVideo.image}
-                alt=""
-                width="1280"
-                height="720"
-              />
-              <span className="featured-tag">FEATURED</span>
-              <div className="play-button" aria-hidden="true">
-                ▶
-              </div>
-              <div className="video-caption">
-                <p>
-                  {featuredVideo.author} · {featuredVideo.meta}
-                </p>
-                <h3>{featuredVideo.title}</h3>
-              </div>
-            </a>
-            <div className="video-list">
-              {videos.map((video, index) => (
-                <a
-                  className="video-item"
-                  href={video.href}
-                  key={video.title}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${video.title} YouTube에서 보기`}
-                >
-                  <span>0{index + 1}</span>
-                  <img src={video.image} alt="" width="160" height="90" />
-                  <div>
-                    <h3>{video.title}</h3>
-                    <p>
-                      {video.author} · {video.meta}
-                    </p>
-                  </div>
-                  <b>↗</b>
-                </a>
-              ))}
-              <a href="#contact">
-                채널 구독 문의 <span>→</span>
-              </a>
-            </div>
-          </div>
+          <VideoShowcase
+            videos={[featuredVideo, ...videos]}
+            channelHref="https://www.youtube.com/channel/UCYRR-uYiex4Cx7IIIwFlEpg"
+          />
         </div>
       </section>
 
@@ -506,8 +463,8 @@ export default function Home() {
       <footer>
         <div className="container footer-grid">
           <div className="footer-brand">
-            <a className="brand" href="#top">
-              <Mark />
+            <a className="brand" href="#top" aria-label="LevelDev 홈">
+              <BrandLogo />
               <span>LEVELDEV</span>
             </a>
             <p>아이디어를 콘텐츠로, 콘텐츠를 경험으로.</p>
