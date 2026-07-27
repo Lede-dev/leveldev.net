@@ -330,9 +330,9 @@ a {
   z-index: 2;
   bottom: 34px;
   left: 50%;
-  color: #414a42;
+  color: #667067;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.3em;
   writing-mode: vertical-rl;
 }
@@ -372,7 +372,7 @@ a {
 
 .section-copy.dim {
   margin-top: 12px;
-  color: #5f675f;
+  color: #7c857d;
 }
 
 .stat-grid {
@@ -415,7 +415,7 @@ a {
 }
 
 .stat-card small {
-  color: #505850;
+  color: #768078;
   font-size: 13px;
 }
 
@@ -443,7 +443,7 @@ a {
 
 .section-heading > p:last-child {
   margin: 12px 0 0;
-  color: #5c655d;
+  color: #808980;
   font-size: 15px;
 }
 
@@ -513,9 +513,9 @@ a {
 }
 
 .partner-card span {
-  color: #596159;
+  color: #7b857c;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
 }
 
@@ -540,6 +540,7 @@ a {
 }
 
 .service-card {
+  position: relative;
   min-height: 286px;
   padding: 28px 25px 25px;
   border-top: 1px solid var(--line);
@@ -569,6 +570,22 @@ a {
   font-size: 13px;
 }
 
+.service-phase {
+  position: absolute;
+  top: 37px;
+  right: 26px;
+  color: #667067;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  transition: color 200ms ease;
+}
+
+.service-card:hover .service-phase {
+  color: rgba(132, 240, 0, 0.7);
+}
+
 .service-card h3,
 .notice-grid h3 {
   margin: 0;
@@ -579,7 +596,7 @@ a {
 .service-card > p {
   min-height: 82px;
   margin: 13px 0 0;
-  color: #697169;
+  color: #899289;
   font-size: 14px;
   line-height: 1.65;
   word-break: keep-all;
@@ -595,9 +612,9 @@ a {
 .tag-row span {
   padding: 6px 8px;
   border: 1px solid #161e17;
-  color: #586058;
+  color: #7f897f;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.04em;
 }
 
@@ -649,9 +666,9 @@ a {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  color: #4c554d;
+  color: #89928a;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.9);
 }
 
@@ -691,9 +708,9 @@ a {
 }
 
 .project-link {
-  color: #98a198;
+  color: #abb4ab;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95);
 }
 
@@ -765,7 +782,7 @@ a {
   border: 1px solid rgba(132, 240, 0, 0.24);
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .play-button {
@@ -800,9 +817,9 @@ a {
 .video-caption p,
 .video-list p {
   margin: 0 0 7px;
-  color: #586158;
+  color: #818b82;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .video-caption h3 {
@@ -914,13 +931,13 @@ a {
 .notice-grid article > div span {
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .notice-grid time {
-  color: #3f4740;
+  color: #717a72;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .notice-grid h3 {
@@ -930,7 +947,7 @@ a {
 }
 
 .notice-grid p {
-  color: #525a53;
+  color: #848d85;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -938,9 +955,9 @@ a {
 .notice-grid b {
   display: block;
   margin-top: 17px;
-  color: #465047;
+  color: #727b73;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
 }
 
@@ -1023,7 +1040,7 @@ a {
 
 .timeline-card p {
   margin: 0;
-  color: #596159;
+  color: #7f8980;
   font-size: 13px;
   line-height: 1.65;
 }
@@ -1064,7 +1081,7 @@ a {
 .contact-points b {
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -1072,7 +1089,7 @@ a {
   display: flex;
   gap: 12px;
   margin: 0;
-  color: #5f675f;
+  color: #7b857c;
   font-size: 13px;
 }
 
@@ -1115,7 +1132,7 @@ a {
   margin: 24px 0 8px;
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .contact-card h3 {
@@ -1126,7 +1143,7 @@ a {
 
 .contact-card > p:last-of-type {
   margin: 15px 0 29px;
-  color: #626a63;
+  color: #7d867e;
   font-size: 14px;
   line-height: 1.75;
 }
@@ -1174,9 +1191,9 @@ footer {
 
 .footer-brand > p {
   margin: 17px 0 23px;
-  color: #4f584f;
+  color: #788279;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.18em;
 }
 
@@ -1246,9 +1263,9 @@ footer {
 
 .social-copy small {
   overflow: hidden;
-  color: #535c54;
+  color: #7c867d;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1257,7 +1274,7 @@ footer {
 .social-row a > b {
   color: rgba(132, 240, 0, 0.45);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
 }
 
@@ -1277,12 +1294,12 @@ footer {
   margin-bottom: 6px;
   color: #8c948b;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .footer-links a {
-  color: #4e564e;
-  font-size: 12px;
+  color: #788279;
+  font-size: 13px;
 }
 
 .footer-bottom {
@@ -1291,9 +1308,9 @@ footer {
   margin-top: 42px;
   padding-top: 20px;
   border-top: 1px solid #0a0e0b;
-  color: #303731;
+  color: #626c63;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 @media (max-width: 900px) {
@@ -1408,13 +1425,13 @@ footer {
   }
 
   .partner-card span {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .partner-card b {
     top: 12px;
     right: 13px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .service-grid,

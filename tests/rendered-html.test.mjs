@@ -49,8 +49,14 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /Stella IT/);
   assert.match(html, /\/partners\/iru\.jpg/);
   assert.match(html, /https:\/\/stella-it\.com\//);
-  assert.match(html, /콘텐츠 기획 &amp; 제작/);
-  assert.match(html, /인터랙티브 콘텐츠 개발/);
+  assert.match(html, /전략 기획 &amp; 프로덕션/);
+  assert.match(html, /인터랙티브 경험 개발/);
+  assert.match(html, /크리에이터 &amp; 브랜드 캠페인/);
+  assert.match(html, /기술 운영 &amp; 성장 지원/);
+  assert.match(html, /PLAN/);
+  assert.match(html, /BUILD/);
+  assert.match(html, /CONNECT/);
+  assert.match(html, /OPERATE/);
   assert.match(html, /한강서버/);
   assert.match(html, /이리와 운동회/);
   assert.match(html, /모징어 게임/);

@@ -47,26 +47,30 @@ const partners = [
 const services = [
   {
     code: "01",
-    title: "콘텐츠 기획 & 제작",
-    text: "프로젝트의 목적과 타깃을 정의하고, 세계관·포맷·사용자 흐름을 설계해 실행 가능한 콘텐츠로 완성합니다.",
+    phase: "PLAN",
+    title: "전략 기획 & 프로덕션",
+    text: "목적과 타깃을 정리하고, 세계관·포맷·사용자 여정을 설계해 제작 가능한 실행안과 결과물로 연결합니다.",
     tags: ["STRATEGY", "FORMAT", "PRODUCTION"],
   },
   {
     code: "02",
-    title: "인터랙티브 콘텐츠 개발",
-    text: "게임, 콘텐츠 서버, 참여형 이벤트 등 사용자가 직접 경험하는 콘텐츠를 안정적인 기술로 구현합니다.",
+    phase: "BUILD",
+    title: "인터랙티브 경험 개발",
+    text: "게임, 콘텐츠 서버, 참여형 이벤트 등 사용자가 직접 움직이고 반응하는 경험을 안정적인 기술로 구현합니다.",
     tags: ["GAME", "SERVER", "INTERACTIVE"],
   },
   {
     code: "03",
-    title: "크리에이터 & 브랜드 콘텐츠",
-    text: "방송·영상·캠페인을 채널과 브랜드의 성격에 맞게 기획하며, 출연자와 시청자가 함께 즐기는 경험을 만듭니다.",
+    phase: "CONNECT",
+    title: "크리에이터 & 브랜드 캠페인",
+    text: "크리에이터와 브랜드의 목소리를 살린 방송·영상·캠페인을 기획해 사람과 채널이 만나는 접점을 만듭니다.",
     tags: ["CREATOR", "BRAND", "MEDIA"],
   },
   {
     code: "04",
-    title: "기술 운영 & 컨설팅",
-    text: "프로젝트 인프라와 자동화 시스템을 구축하고, 출시 이후 운영·개선까지 지속 가능한 제작 환경을 지원합니다.",
+    phase: "OPERATE",
+    title: "기술 운영 & 성장 지원",
+    text: "인프라와 자동화, 라이브 운영 체계를 구축하고 데이터와 피드백을 바탕으로 출시 이후 개선을 지원합니다.",
     tags: ["INFRA", "OPERATIONS", "CONSULTING"],
   },
 ];
@@ -356,6 +360,7 @@ export default function Home() {
             {services.map((service) => (
               <article className="service-card" key={service.code}>
                 <div className="service-icon">{service.code}</div>
+                <span className="service-phase">{service.phase}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
                 <div className="tag-row">
