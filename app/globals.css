@@ -52,11 +52,11 @@ a {
 }
 
 .section {
-  padding: 150px 0;
+  padding: 108px 0;
 }
 
 .section-tight {
-  padding: 118px 0;
+  padding: 86px 0;
 }
 
 .site-header {
@@ -121,7 +121,7 @@ a {
 
 .site-header nav a {
   color: #879087;
-  font-size: 12px;
+  font-size: 13px;
   transition: color 180ms ease;
 }
 
@@ -132,10 +132,10 @@ a {
 
 .header-cta {
   justify-self: end;
-  padding: 11px 15px;
+  padding: 12px 17px;
   color: #091006;
   background: var(--lime);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
 }
 
@@ -146,7 +146,7 @@ a {
 .hero {
   position: relative;
   display: flex;
-  min-height: 100svh;
+  min-height: min(900px, 100svh);
   align-items: center;
   overflow: hidden;
   border-bottom: 1px solid #070c08;
@@ -193,13 +193,13 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin: 0 0 22px;
-  padding: 5px 8px;
+  margin: 0 0 18px;
+  padding: 6px 9px;
   border: 1px solid rgba(132, 240, 0, 0.25);
   color: var(--lime);
   background: rgba(132, 240, 0, 0.035);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.13em;
 }
@@ -231,27 +231,27 @@ a {
 }
 
 .hero-copy {
-  margin: 38px 0 0;
+  margin: 32px 0 0;
   color: #8b938b;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.72;
 }
 
 .hero-actions {
   display: flex;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 26px;
 }
 
 .button {
   display: inline-flex;
-  min-height: 42px;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
   gap: 18px;
-  padding: 0 18px;
+  padding: 0 21px;
   border: 1px solid transparent;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 750;
   transition:
     transform 180ms ease,
@@ -344,7 +344,7 @@ a {
 .about-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 110px;
+  gap: 72px;
   align-items: center;
 }
 
@@ -363,15 +363,15 @@ a {
 
 .section-copy {
   max-width: 600px;
-  margin: 33px 0 0;
+  margin: 26px 0 0;
   color: #9aa29b;
-  font-size: 14px;
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.75;
   word-break: keep-all;
 }
 
 .section-copy.dim {
-  margin-top: 14px;
+  margin-top: 12px;
   color: #5f675f;
 }
 
@@ -382,8 +382,8 @@ a {
 
 .stat-card {
   position: relative;
-  min-height: 172px;
-  padding: 33px;
+  min-height: 180px;
+  padding: 30px;
   border: 1px solid var(--line);
   background: linear-gradient(145deg, rgba(8, 14, 9, 0.76), rgba(3, 6, 4, 0.8));
 }
@@ -402,7 +402,7 @@ a {
   left: 25px;
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .stat-card strong {
@@ -410,17 +410,17 @@ a {
   margin-top: 32px;
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 31px;
+  font-size: 38px;
   letter-spacing: -0.08em;
 }
 
 .stat-card small {
   color: #505850;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .section-heading {
-  margin-bottom: 46px;
+  margin-bottom: 34px;
 }
 
 .section-heading.centered {
@@ -435,7 +435,7 @@ a {
 .section-heading h2,
 .news-heading h2 {
   margin: 0;
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(38px, 4.2vw, 60px);
   font-weight: 520;
   line-height: 1.1;
   letter-spacing: -0.055em;
@@ -444,7 +444,7 @@ a {
 .section-heading > p:last-child {
   margin: 12px 0 0;
   color: #5c655d;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .partners {
@@ -540,8 +540,8 @@ a {
 }
 
 .service-card {
-  min-height: 315px;
-  padding: 32px 26px 26px;
+  min-height: 286px;
+  padding: 28px 25px 25px;
   border-top: 1px solid var(--line);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -559,29 +559,29 @@ a {
 
 .service-icon {
   display: grid;
-  width: 32px;
-  height: 32px;
-  margin-bottom: 57px;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 36px;
   place-items: center;
   color: var(--lime);
   background: rgba(132, 240, 0, 0.08);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .service-card h3,
 .notice-grid h3 {
   margin: 0;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 650;
 }
 
 .service-card > p {
-  min-height: 72px;
-  margin: 15px 0 0;
+  min-height: 82px;
+  margin: 13px 0 0;
   color: #697169;
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.65;
   word-break: keep-all;
 }
 
@@ -589,16 +589,16 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  margin-top: 23px;
+  margin-top: 17px;
 }
 
 .tag-row span,
 .filter-row span {
-  padding: 5px 7px;
+  padding: 6px 8px;
   border: 1px solid #161e17;
   color: #586058;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 0.04em;
 }
 
@@ -629,11 +629,11 @@ a {
 .project-card {
   position: relative;
   display: flex;
-  min-height: 310px;
+  min-height: 286px;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  padding: 20px 23px 24px;
+  padding: 24px 25px 25px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background:
@@ -661,7 +661,7 @@ a {
   justify-content: space-between;
   color: #4c554d;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .project-topline span:first-child {
@@ -673,11 +673,11 @@ a {
 .project-number {
   position: absolute;
   z-index: 1;
-  top: 65px;
+  top: 57px;
   left: 50%;
   color: rgba(132, 240, 0, 0.3);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 48px;
+  font-size: 58px;
   letter-spacing: -0.08em;
   transform: translateX(-50%);
 }
@@ -690,20 +690,20 @@ a {
 .project-meta h3 {
   margin: 0;
   font-family: var(--font-geist-mono), var(--font-geist-sans), sans-serif;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .project-meta p {
   margin: 10px 0 18px;
   color: #555e56;
-  font-size: 9px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.58;
 }
 
 .project-link {
   color: #4e584f;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .videos {
@@ -718,7 +718,7 @@ a {
 
 .featured-video {
   position: relative;
-  min-height: 440px;
+  min-height: 404px;
   overflow: hidden;
   border: 1px solid var(--line);
   background:
@@ -743,11 +743,11 @@ a {
   z-index: 1;
   top: 20px;
   left: 20px;
-  padding: 5px 7px;
+  padding: 6px 9px;
   border: 1px solid rgba(132, 240, 0, 0.24);
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .play-button {
@@ -756,15 +756,15 @@ a {
   top: 47%;
   left: 53%;
   display: grid;
-  width: 54px;
-  height: 54px;
+  width: 64px;
+  height: 64px;
   place-items: center;
   color: #081004;
   background: var(--lime);
   box-shadow:
     0 0 30px rgba(132, 240, 0, 0.45),
     0 0 90px rgba(132, 240, 0, 0.16);
-  font-size: 13px;
+  font-size: 16px;
   transform: translate(-50%, -50%);
 }
 
@@ -774,7 +774,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 25px;
+  padding: 23px 25px;
   border-top: 1px solid var(--line);
   background: rgba(2, 4, 3, 0.84);
 }
@@ -784,12 +784,12 @@ a {
   margin: 0 0 7px;
   color: #586158;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .video-caption h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 550;
 }
 
@@ -802,11 +802,11 @@ a {
 .video-list article {
   display: grid;
   flex: 1;
-  grid-template-columns: 34px 1fr auto;
+  grid-template-columns: 38px 1fr auto;
   align-items: center;
   gap: 13px;
-  min-height: 72px;
-  padding: 14px 17px;
+  min-height: 78px;
+  padding: 14px 18px;
   border: 1px solid var(--line);
   background: #050806;
 }
@@ -815,12 +815,12 @@ a {
 .video-list article > b {
   color: rgba(132, 240, 0, 0.5);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .video-list h3 {
   margin: 0 0 8px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 550;
 }
 
@@ -830,20 +830,20 @@ a {
 
 .video-list > a {
   display: flex;
-  min-height: 42px;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
   gap: 14px;
   border: 1px solid rgba(132, 240, 0, 0.22);
   color: var(--lime);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .news-heading {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  margin-bottom: 37px;
+  margin-bottom: 30px;
 }
 
 .news-heading .eyebrow {
@@ -853,7 +853,7 @@ a {
 .news-heading > a {
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .notice-grid {
@@ -863,8 +863,8 @@ a {
 }
 
 .notice-grid article {
-  min-height: 205px;
-  padding: 24px;
+  min-height: 190px;
+  padding: 25px;
   border-top: 1px solid var(--line);
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -875,44 +875,44 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 23px;
 }
 
 .notice-grid article > div span {
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .notice-grid time {
   color: #3f4740;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .notice-grid h3 {
-  min-height: 42px;
-  font-size: 11px;
+  min-height: 44px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 .notice-grid p {
   color: #525a53;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.6;
 }
 
 .notice-grid b {
   display: block;
-  margin-top: 22px;
+  margin-top: 17px;
   color: #465047;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 400;
 }
 
 .story {
-  min-height: 1220px;
+  min-height: auto;
 }
 
 .timeline-wrap {
@@ -921,7 +921,7 @@ a {
 
 .timeline {
   position: relative;
-  margin-top: 80px;
+  margin-top: 54px;
 }
 
 .timeline-line {
@@ -937,7 +937,7 @@ a {
   position: relative;
   display: flex;
   width: 50%;
-  min-height: 185px;
+  min-height: 162px;
   align-items: flex-start;
 }
 
@@ -971,8 +971,8 @@ a {
 }
 
 .timeline-card {
-  width: 330px;
-  padding: 22px 25px;
+  width: 360px;
+  padding: 23px 26px;
   border: 1px solid var(--line);
   background: linear-gradient(135deg, #050906, #030504);
 }
@@ -980,18 +980,18 @@ a {
 .timeline-card time {
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .timeline-card h3 {
   margin: 13px 0 10px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .timeline-card p {
   margin: 0;
   color: #596159;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.65;
 }
 
@@ -1005,13 +1005,13 @@ a {
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 0.92fr;
-  gap: 100px;
+  gap: 64px;
   align-items: center;
 }
 
 .contact-points {
   max-width: 580px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .contact-points > div {
@@ -1019,7 +1019,7 @@ a {
   grid-template-columns: 40px 1fr auto;
   align-items: center;
   gap: 12px;
-  padding: 17px 0;
+  padding: 18px 0;
   border-top: 1px solid var(--line);
 }
 
@@ -1031,7 +1031,7 @@ a {
 .contact-points b {
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 400;
 }
 
@@ -1040,19 +1040,19 @@ a {
   gap: 12px;
   margin: 0;
   color: #5f675f;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .contact-points strong {
   min-width: 60px;
   color: #dbe2da;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .contact-card {
   position: relative;
   overflow: hidden;
-  padding: 39px;
+  padding: 36px;
   border: 1px solid var(--line-bright);
   background: #050906;
 }
@@ -1082,19 +1082,19 @@ a {
   margin: 24px 0 8px;
   color: var(--lime);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .contact-card h3 {
   margin: 0;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 520;
 }
 
 .contact-card > p:last-of-type {
   margin: 15px 0 29px;
   color: #626a63;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.75;
 }
 
@@ -1109,7 +1109,7 @@ a {
   justify-content: space-between;
   padding: 11px 0;
   border-top: 1px solid var(--line);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .contact-card li span {
@@ -1128,7 +1128,7 @@ a {
 }
 
 footer {
-  padding: 70px 0 23px;
+  padding: 54px 0 24px;
   border-top: 1px solid var(--line);
   background: #010302;
 }
@@ -1142,7 +1142,7 @@ footer {
   margin: 17px 0;
   color: #4f584f;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 0.18em;
 }
 
@@ -1153,13 +1153,13 @@ footer {
 
 .social-row a {
   display: grid;
-  width: 26px;
-  height: 26px;
+  width: 32px;
+  height: 32px;
   place-items: center;
   border: 1px solid var(--line);
   color: #687068;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 .footer-links {
@@ -1178,23 +1178,23 @@ footer {
   margin-bottom: 6px;
   color: #8c948b;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .footer-links a {
   color: #4e564e;
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 42px;
   padding-top: 20px;
   border-top: 1px solid #0a0e0b;
   color: #303731;
   font-family: var(--font-geist-mono), monospace;
-  font-size: 7px;
+  font-size: 9px;
 }
 
 @media (max-width: 900px) {
@@ -1236,11 +1236,11 @@ footer {
   }
 
   .section {
-    padding: 100px 0;
+    padding: 76px 0;
   }
 
   .section-tight {
-    padding: 84px 0;
+    padding: 64px 0;
   }
 
   .site-header {
@@ -1257,7 +1257,7 @@ footer {
   }
 
   .hero {
-    min-height: 790px;
+    min-height: 700px;
   }
 
   .hero h1 {
@@ -1271,7 +1271,7 @@ footer {
 
   .hero-copy {
     max-width: 330px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .hero-actions {
@@ -1304,7 +1304,7 @@ footer {
   }
 
   .partner-card span {
-    font-size: 7px;
+    font-size: 8px;
   }
 
   .partner-card b {
@@ -1320,15 +1320,15 @@ footer {
   }
 
   .service-card {
-    min-height: 270px;
+    min-height: 250px;
   }
 
   .project-card {
-    min-height: 280px;
+    min-height: 260px;
   }
 
   .featured-video {
-    min-height: 360px;
+    min-height: 330px;
   }
 
   .news-heading {
@@ -1336,7 +1336,7 @@ footer {
   }
 
   .timeline {
-    margin-top: 55px;
+    margin-top: 38px;
   }
 
   .timeline-line {
@@ -1346,7 +1346,7 @@ footer {
   .timeline article,
   .timeline article.right {
     width: 100%;
-    min-height: 160px;
+    min-height: 148px;
     margin-left: 0;
     padding-right: 0;
     padding-left: 42px;
