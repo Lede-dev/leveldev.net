@@ -35,12 +35,16 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   );
   assert.match(html, /MINECRAFT CONTENT STUDIO/);
   assert.match(html, /픽셀로 세계를/);
+  assert.match(html, /10M\+/);
+  assert.match(html, /누적 콘텐츠 조회수/);
+  assert.match(html, /완료 작업/);
+  assert.match(html, /스튜디오 경력/);
   assert.match(html, /마인크래프트 맵 제작/);
   assert.match(html, /Dragon(?:'|&#x27;)s Keep/);
   assert.match(html, /SkyWars Pro/);
   assert.match(html, /누적 조회수 5,000만 뷰/);
   assert.match(html, /mailto:jobs@leveldev\.studio/);
-  assert.match(html, /github\.com\/LedeStudios\/leveldev-home/);
+  assert.doesNotMatch(html, /github\.com|LedeStudios|GitHub/);
 });
 
 test("ships finished metadata without starter preview markers", async () => {

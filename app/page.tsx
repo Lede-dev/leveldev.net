@@ -1,8 +1,8 @@
 const stats = [
-  { value: "100+", label: "완료 프로젝트" },
-  { value: "50K+", label: "유튜브 구독자" },
+  { value: "10+", label: "완료 작업" },
+  { value: "10M+", label: "누적 콘텐츠 조회수" },
   { value: "5년+", label: "스튜디오 경력" },
-  { value: "20+", label: "파트너십" },
+  { value: "10+", label: "파트너십" },
 ];
 
 const partners = [
@@ -423,7 +423,7 @@ export default function Home() {
               {[
                 ["01", "Discord", "커뮤니티 서버에서 직접 대화"],
                 ["02", "이메일", "hello@leveldev.studio"],
-                ["03", "GitHub", "LedeStudios/leveldev-home"],
+                ["03", "프로젝트", "맵·서버·콘텐츠 제작 협업"],
               ].map(([no, title, desc]) => (
                 <div key={no}>
                   <span>{no}</span>
@@ -485,11 +485,8 @@ export default function Home() {
               <a href="#contact" aria-label="Discord 커뮤니티">
                 DC
               </a>
-              <a
-                href="https://github.com/LedeStudios/leveldev-home"
-                aria-label="LevelDev GitHub"
-              >
-                GH
+              <a href="mailto:hello@leveldev.studio" aria-label="LevelDev 이메일">
+                EM
               </a>
             </div>
           </div>
@@ -509,7 +506,7 @@ export default function Home() {
             <div>
               <strong>CONTACT</strong>
               <a href="mailto:hello@leveldev.studio">Email</a>
-              <a href="https://github.com/LedeStudios/leveldev-home">GitHub</a>
+              <a href="#contact">Discord</a>
               <a href="#contact">문의하기</a>
             </div>
           </div>
