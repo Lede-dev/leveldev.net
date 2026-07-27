@@ -39,6 +39,14 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   assert.match(html, /누적 콘텐츠 조회수/);
   assert.match(html, /완료 작업/);
   assert.match(html, /스튜디오 경력/);
+  assert.match(html, /이루/);
+  assert.match(html, /셔니/);
+  assert.match(html, /블던/);
+  assert.match(html, /알지모/);
+  assert.match(html, /머땡/);
+  assert.match(html, /Stella IT/);
+  assert.match(html, /\/partners\/iru\.jpg/);
+  assert.match(html, /https:\/\/stella-it\.com\//);
   assert.match(html, /마인크래프트 맵 제작/);
   assert.match(html, /Dragon(?:'|&#x27;)s Keep/);
   assert.match(html, /SkyWars Pro/);

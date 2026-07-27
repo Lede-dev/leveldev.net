@@ -6,14 +6,42 @@ const stats = [
 ];
 
 const partners = [
-  ["MCM", "MCMarket"],
-  ["CF", "CurseForge"],
-  ["MK", "Minecraft Korea"],
-  ["GM", "GameMCN"],
-  ["PF", "PixelForge Studio"],
-  ["NH", "NexusHosting"],
-  ["AB", "ArtBlock Creative"],
-  ["SC", "SoundCraft KR"],
+  {
+    name: "이루",
+    category: "MINECRAFT CREATOR",
+    href: "https://www.youtube.com/@이루05",
+    image: "/partners/iru.jpg",
+  },
+  {
+    name: "셔니",
+    category: "MINECRAFT CREATOR",
+    href: "https://www.youtube.com/@수박머리_셔니",
+    image: "/partners/seanyi.jpg",
+  },
+  {
+    name: "블던",
+    category: "MINECRAFT CREATOR",
+    href: "https://www.youtube.com/@블던",
+    image: "/partners/bluedun.jpg",
+  },
+  {
+    name: "알지모",
+    category: "MINECRAFT CREATOR",
+    href: "https://www.youtube.com/@알지모",
+    image: "/partners/algimo.jpg",
+  },
+  {
+    name: "머땡",
+    category: "MINECRAFT CREATOR",
+    href: "https://www.youtube.com/@머땡",
+    image: "/partners/meottaeng.jpg",
+  },
+  {
+    name: "Stella IT",
+    category: "TECHNOLOGY PARTNER",
+    href: "https://stella-it.com/",
+    image: "/partners/stella-it.jpg",
+  },
 ];
 
 const services = [
@@ -256,11 +284,26 @@ export default function Home() {
             <p>LevelDev와 함께 더 나은 마인크래프트 경험을 만드는 파트너입니다.</p>
           </div>
           <div className="partner-grid">
-            {partners.map(([abbr, name]) => (
-              <div className="partner-card" key={name}>
-                <strong>{abbr}</strong>
-                <span>{name}</span>
-              </div>
+            {partners.map((partner) => (
+              <a
+                className="partner-card"
+                href={partner.href}
+                key={partner.name}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${partner.name} 파트너 페이지 열기`}
+              >
+                <img
+                  className="partner-avatar"
+                  src={partner.image}
+                  alt={`${partner.name} 프로필`}
+                  width="96"
+                  height="96"
+                />
+                <strong>{partner.name}</strong>
+                <span>{partner.category}</span>
+                <b aria-hidden="true">↗</b>
+              </a>
             ))}
           </div>
         </div>

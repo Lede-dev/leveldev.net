@@ -449,7 +449,7 @@ a {
 
 .partner-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
@@ -460,36 +460,64 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 10px;
+  padding: 30px 20px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: #030604;
   transition:
     border-color 200ms ease,
-    background 200ms ease;
+    background 200ms ease,
+    transform 200ms ease;
 }
 
 .partner-card:hover {
   border-color: var(--line-bright);
   background: #060b07;
+  transform: translateY(-4px);
+}
+
+.partner-avatar {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(132, 240, 0, 0.25);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px rgba(132, 240, 0, 0.025);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.partner-card:hover .partner-avatar {
+  border-color: rgba(132, 240, 0, 0.65);
+  box-shadow: 0 0 28px rgba(132, 240, 0, 0.13);
+  transform: scale(1.04);
 }
 
 .partner-card strong {
-  display: grid;
-  width: 48px;
-  height: 48px;
-  place-items: center;
-  border: 1px solid rgba(132, 240, 0, 0.15);
-  color: var(--lime);
-  background: rgba(132, 240, 0, 0.045);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 15px;
+  color: #e6ece4;
+  font-size: 13px;
+  font-weight: 650;
 }
 
 .partner-card span {
   color: #596159;
   font-family: var(--font-geist-mono), monospace;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+}
+
+.partner-card b {
+  position: absolute;
+  top: 16px;
+  right: 17px;
+  color: rgba(132, 240, 0, 0.45);
+  font-family: var(--font-geist-mono), monospace;
   font-size: 9px;
+  font-weight: 400;
 }
 
 .services {
