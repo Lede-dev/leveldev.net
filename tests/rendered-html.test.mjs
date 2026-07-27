@@ -93,6 +93,8 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /aria-label="다음 영상 목록 보기"/);
   assert.match(html, /data-count="2"/);
   assert.match(html, /YouTube 채널에서 더 보기/);
+  assert.doesNotMatch(html, /video-play/);
+  assert.doesNotMatch(html, />SELECT</);
   assert.match(html, /© 2026 LEVELDEV INC\. ALL RIGHTS RESERVED\./);
   assert.doesNotMatch(html, /© 2026 LEVELDEV STUDIO/);
   assert.doesNotMatch(html, /CONTENT DEVELOPMENT STUDIO|스튜디오 소개|개발 스튜디오/);

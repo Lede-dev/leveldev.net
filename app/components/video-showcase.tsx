@@ -82,16 +82,13 @@ export default function VideoShowcase({
           target="_blank"
           rel="noreferrer"
           aria-label={`${activeVideo.title} YouTube에서 보기`}
-        >
-          <img
-            src={activeVideo.image}
-            alt=""
-            width="1280"
-            height="720"
-          />
-          <span className="video-play" aria-hidden="true">
-            ▶
-          </span>
+          >
+            <img
+              src={activeVideo.image}
+              alt=""
+              width="1280"
+              height="720"
+            />
         </a>
 
         <div className="video-stage-info" aria-live="polite">
@@ -163,7 +160,6 @@ export default function VideoShowcase({
           >
             <span className="video-selector-image">
               <img src={video.image} alt="" width="480" height="270" />
-              <b aria-hidden="true">SELECT</b>
             </span>
             <span className="video-selector-copy">
               <small>{video.author}</small>
