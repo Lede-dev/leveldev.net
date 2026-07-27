@@ -74,60 +74,66 @@ const services = [
 const projects = [
   {
     no: "01",
-    title: "Dragon's Keep",
-    type: "ADVENTURE MAP",
-    status: "MAP",
-    description: "드래곤을 물리치는 대규모 어드벤처 맵. 15시간 분량의 스토리와 커스텀 보스를 담았습니다.",
-    tags: ["어드벤처", "RPG", "멀티플레이"],
+    title: "한강서버",
+    client: "한사기",
+    date: "2026.04",
+    platform: "CHZZK",
+    description: "치지직 스트리머를 위해 기획·개발한 콘텐츠 서버입니다.",
+    image: "/projects/hangang-server.jpg",
   },
   {
     no: "02",
-    title: "SkyWars Pro",
-    type: "GAME PLUGIN",
-    status: "GAME",
-    description: "5,000명 이상 동시 접속 환경에서 안정성을 검증한 고성능 스카이워즈 플러그인입니다.",
-    tags: ["미니게임", "PvP", "플러그인"],
+    title: "이리와 운동회",
+    client: "유이리",
+    date: "2025.09",
+    platform: "CHZZK",
+    description: "치지직 스트리머들이 함께 즐길 수 있도록 제작한 운동회 콘텐츠 서버입니다.",
+    image: "/projects/iriwa-sports-day.jpg",
   },
   {
     no: "03",
-    title: "마인크래프트 100일 생존",
-    type: "YOUTUBE SERIES",
-    status: "MEDIA",
-    description: "마인크래프트 생존을 장기 서사로 풀어낸 시리즈로, 누적 100만 조회를 달성했습니다.",
-    tags: ["유튜브", "생존", "시리즈"],
+    title: "모징어 게임",
+    client: "로빈",
+    date: "2025.07",
+    platform: "ALL PLATFORM",
+    description: "모든 플랫폼의 대규모 스트리머와 유튜버가 참여한 콘텐츠 서버입니다.",
+    image: "/projects/mojingeo-game.jpg",
   },
   {
     no: "04",
-    title: "Nether Labyrinth",
-    type: "PUZZLE MAP",
-    status: "MAP",
-    description: "네더를 배경으로 퍼즐과 탐험을 결합한 협동 어드벤처 맵입니다.",
-    tags: ["퍼즐", "어드벤처", "협동"],
-  },
-  {
-    no: "05",
-    title: "Custom Survival Server",
-    type: "SERVER DEVELOPMENT",
-    status: "GAME",
-    description: "커스텀 인챈트, 직업, 경제 시스템을 하나의 플레이 루프로 통합한 생존 서버입니다.",
-    tags: ["서버", "생존", "경제 시스템"],
-  },
-  {
-    no: "06",
-    title: "빌딩 타임랩스 시리즈",
-    type: "SHORT-FORM CONTENT",
-    status: "MEDIA",
-    description: "대형 건축물의 제작 과정을 압축해 보여주는 쇼츠 시리즈로 누적 500만 조회를 기록했습니다.",
-    tags: ["쇼츠", "빌딩", "타임랩스"],
+    title: "블루점프 원블럭",
+    client: "대월향 & 블루점프",
+    date: "2026.05",
+    platform: "SOOP",
+    description: "SOOP 블루점프 멤버 전용으로 설계한 원블럭 콘텐츠 서버입니다.",
+    image: null,
   },
 ];
 
 const videos = [
-  ["12.4만 조회 · 3일 전", "마인크래프트 100일 생존기 EP.12 — 네더 요새 공략"],
-  ["8.1만 조회 · 1주 전", "【타임랩스】 거대 성 빌딩 — 24시간 제작 과정"],
-  ["5.7만 조회 · 2주 전", "Dragon's Keep 맵 공개 트레일러"],
-  ["3.2만 조회 · 3주 전", "스카이워즈 신규 시즌 서버 업데이트 안내"],
+  {
+    title: "【한강 서버】벽 뒤에 자꾸 뭐가 보임",
+    meta: "2.8천 조회 · 2026.05.24",
+    author: "김용찬",
+    href: "https://www.youtube.com/watch?v=UNk70G0rAS0&t=2s",
+    image: "/projects/hangang-server.jpg",
+  },
+  {
+    title: "하꼬가 치지직지원을 받았다고? 😲🫢 | 이리와 운동회",
+    meta: "2.3천 조회 · 2025.10.11",
+    author: "유이리",
+    href: "https://www.youtube.com/watch?v=0PJj4ETImRQ&t=30s",
+    image: "/projects/iriwa-sports-day.jpg",
+  },
 ];
+
+const featuredVideo = {
+  title: "오징어 게임에서 1등 하기",
+  meta: "18.7만 조회 · 2025.07.27",
+  author: "블루맥스",
+  href: "https://www.youtube.com/watch?v=I04NY35EDlg&t=26s",
+  image: "/projects/mojingeo-game.jpg",
+};
 
 const notices = [
   {
@@ -347,15 +353,24 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.no}>
+                {project.image ? (
+                  <img
+                    className="project-image"
+                    src={project.image}
+                    alt={`${project.title} 프로젝트`}
+                    width="640"
+                    height="360"
+                  />
+                ) : null}
                 <div className="project-topline">
-                  <span>{project.type}</span>
-                  <span>{project.status}</span>
+                  <span>{project.platform}</span>
+                  <span>{project.date}</span>
                 </div>
                 <strong className="project-number">{project.no}</strong>
                 <div className="project-meta">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <span className="project-link">{project.tags.join(" · ")}</span>
+                  <span className="project-link">CLIENT · {project.client}</span>
                 </div>
               </article>
             ))}
@@ -370,26 +385,51 @@ export default function Home() {
             <h2>최근 영상</h2>
           </div>
           <div className="video-layout">
-            <article className="featured-video">
+            <a
+              className="featured-video"
+              href={featuredVideo.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${featuredVideo.title} YouTube에서 보기`}
+            >
+              <img
+                className="video-cover"
+                src={featuredVideo.image}
+                alt=""
+                width="1280"
+                height="720"
+              />
               <span className="featured-tag">FEATURED</span>
               <div className="play-button" aria-hidden="true">
                 ▶
               </div>
               <div className="video-caption">
-                <p>12.4만 조회 · 3일 전</p>
-                <h3>마인크래프트 100일 생존기 EP.12 — 네더 요새 공략</h3>
+                <p>
+                  {featuredVideo.author} · {featuredVideo.meta}
+                </p>
+                <h3>{featuredVideo.title}</h3>
               </div>
-            </article>
+            </a>
             <div className="video-list">
-              {videos.map(([meta, title], index) => (
-                <article key={title}>
+              {videos.map((video, index) => (
+                <a
+                  className="video-item"
+                  href={video.href}
+                  key={video.title}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${video.title} YouTube에서 보기`}
+                >
                   <span>0{index + 1}</span>
+                  <img src={video.image} alt="" width="160" height="90" />
                   <div>
-                    <h3>{title}</h3>
-                    <p>{meta}</p>
+                    <h3>{video.title}</h3>
+                    <p>
+                      {video.author} · {video.meta}
+                    </p>
                   </div>
                   <b>↗</b>
-                </article>
+                </a>
               ))}
               <a href="#contact">
                 채널 구독 문의 <span>→</span>

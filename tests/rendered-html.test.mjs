@@ -48,8 +48,16 @@ test("server-renders the LevelDev Minecraft studio landing page", async () => {
   assert.match(html, /\/partners\/iru\.jpg/);
   assert.match(html, /https:\/\/stella-it\.com\//);
   assert.match(html, /마인크래프트 맵 제작/);
-  assert.match(html, /Dragon(?:'|&#x27;)s Keep/);
-  assert.match(html, /SkyWars Pro/);
+  assert.match(html, /한강서버/);
+  assert.match(html, /이리와 운동회/);
+  assert.match(html, /모징어 게임/);
+  assert.match(html, /블루점프 원블럭/);
+  assert.match(html, /대월향 &amp; 블루점프/);
+  assert.match(html, /\/projects\/hangang-server\.jpg/);
+  assert.match(html, /youtube\.com\/watch\?v=I04NY35EDlg/);
+  assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);
+  assert.match(html, /youtube\.com\/watch\?v=0PJj4ETImRQ/);
+  assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
   assert.match(html, /누적 조회수 5,000만 뷰/);
   assert.match(html, /mailto:jobs@leveldev\.studio/);
   assert.doesNotMatch(html, /github\.com|LedeStudios|GitHub/);
