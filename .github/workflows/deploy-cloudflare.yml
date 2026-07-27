@@ -1,0 +1,52 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: leveldev-net-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build, verify, and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out master
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify rendered pages
+        run: node --test tests/rendered-html.test.mjs
+
+      - name: Deploy to Cloudflare Workers
+        run: >
+          npx wrangler deploy
+          --config dist/server/wrangler.json
+          --name leveldev-net
+          --domain leveldev.net
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

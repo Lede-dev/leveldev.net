@@ -1312,12 +1312,6 @@ a {
   margin-bottom: 13px;
 }
 
-.news-heading > a {
-  color: var(--lime);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 12px;
-}
-
 .notice-carousel {
   position: relative;
 }
@@ -1379,7 +1373,7 @@ a {
   gap: 16px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  padding: 2px 2px 14px;
+  padding: 8px 2px 14px;
   scroll-padding-inline: 2px;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;

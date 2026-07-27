@@ -402,7 +402,6 @@ export default function Home() {
               <p className="eyebrow">NEWS</p>
               <h2>공지사항</h2>
             </div>
-            <a href="#contact">문의하기 →</a>
           </div>
           <NoticeCarousel notices={notices} />
         </div>

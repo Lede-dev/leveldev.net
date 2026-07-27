@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { findNotice, notices } from "../../data/notices";
 
@@ -36,10 +37,10 @@ export default async function NoticeDetailPage({
   return (
     <main className="notice-page">
       <header className="notice-page-header">
-        <a href="/" aria-label="LevelDev 홈">
+        <Link href="/" aria-label="LevelDev 홈">
           <img src="/logo.svg" alt="LevelDev" width="132" height="40" />
-        </a>
-        <a href="/#news">← 공지사항으로 돌아가기</a>
+        </Link>
+        <Link href="/#news">← 공지사항으로 돌아가기</Link>
       </header>
 
       <article className="notice-article">
