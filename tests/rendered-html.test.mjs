@@ -69,7 +69,6 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /youtube\.com\/watch\?v=UNk70G0rAS0/);
   assert.match(html, /youtube\.com\/watch\?v=0PJj4ETImRQ/);
   assert.match(html, /18\.7만 조회 · 2025\.07\.27/);
-  assert.match(html, /콘텐츠 서비스 영역 확장/);
   assert.match(html, /mailto:jobs@leveldev\.studio/);
   assert.match(html, /https:\/\/discord\.gg\/49HEWTA/);
   assert.match(html, /youtube\.com\/channel\/UCYRR-uYiex4Cx7IIIwFlEpg/);
@@ -79,7 +78,7 @@ test("server-renders the LevelDev content development studio landing page", asyn
   assert.match(html, /\/icons\/youtube\.svg/);
   assert.match(html, /\/icons\/github\.svg/);
   assert.match(html, /\/icons\/mail\.svg/);
-  assert.doesNotMatch(html, /filter-row|project-number/);
+  assert.doesNotMatch(html, /filter-row|project-number|id="history"|HISTORY/);
   assert.doesNotMatch(html, /hello@leveldev\.studio|LedeStudios/);
 });
 

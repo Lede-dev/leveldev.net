@@ -191,39 +191,6 @@ const notices = [
   },
 ];
 
-const timeline = [
-  {
-    year: "2020",
-    title: "콘텐츠 제작팀으로 시작",
-    text: "디지털 콘텐츠 제작과 커뮤니티 프로젝트를 시작하며 LevelDev의 첫 제작 경험을 쌓았습니다.",
-  },
-  {
-    year: "2021",
-    title: "크리에이터 협업 확대",
-    text: "스트리머·크리에이터와 함께 참여형 콘텐츠와 방송 프로젝트를 제작했습니다.",
-  },
-  {
-    year: "2022",
-    title: "인터랙티브 콘텐츠 개발",
-    text: "콘텐츠 기획에 게임·서버 개발 역량을 결합해 사용자가 직접 참여하는 경험을 만들었습니다.",
-  },
-  {
-    year: "2023",
-    title: "제작·운영 체계 확장",
-    text: "기획, 디자인, 개발, 운영을 하나의 흐름으로 연결하는 협업 체계를 구축했습니다.",
-  },
-  {
-    year: "2024",
-    title: "파트너 네트워크 강화",
-    text: "크리에이터와 기술 파트너 네트워크를 넓히며 더 큰 규모의 프로젝트를 지원했습니다.",
-  },
-  {
-    year: "2025",
-    title: "콘텐츠 서비스 영역 확장",
-    text: "단발성 제작을 넘어 출시 이후 운영과 개선까지 제공하는 콘텐츠 스튜디오로 성장하고 있습니다.",
-  },
-];
-
 export const dynamic = "force-static";
 
 function Mark() {
@@ -493,31 +460,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="story section" id="history">
-        <div className="container timeline-wrap">
-          <div className="section-heading centered">
-            <p className="eyebrow">HISTORY</p>
-            <h2>
-              우리의 <span>발자취</span>
-            </h2>
-            <p>콘텐츠 제작에서 서비스 운영까지, 프로젝트의 범위를 꾸준히 넓혀왔습니다.</p>
-          </div>
-          <div className="timeline">
-            <div className="timeline-line" aria-hidden="true" />
-            {timeline.map((item, index) => (
-              <article className={index % 2 === 0 ? "left" : "right"} key={item.year}>
-                <span className="timeline-dot" aria-hidden="true" />
-                <div className="timeline-card">
-                  <time>{item.year}</time>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="contact section" id="contact">
         <div className="container contact-grid">
           <div>
@@ -615,7 +557,7 @@ export default function Home() {
             <div>
               <strong>STUDIO</strong>
               <a href="#about">스튜디오 소개</a>
-              <a href="#history">연혁</a>
+              <a href="#partners">파트너</a>
               <a href="#contact">채용</a>
             </div>
             <div>

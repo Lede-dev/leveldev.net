@@ -961,90 +961,6 @@ a {
   font-weight: 400;
 }
 
-.story {
-  min-height: auto;
-}
-
-.timeline-wrap {
-  max-width: 900px;
-}
-
-.timeline {
-  position: relative;
-  margin-top: 54px;
-}
-
-.timeline-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: linear-gradient(var(--lime), rgba(132, 240, 0, 0.08), var(--lime));
-}
-
-.timeline article {
-  position: relative;
-  display: flex;
-  width: 50%;
-  min-height: 162px;
-  align-items: flex-start;
-}
-
-.timeline article.left {
-  justify-content: flex-end;
-  padding-right: 48px;
-  text-align: right;
-}
-
-.timeline article.right {
-  margin-left: 50%;
-  padding-left: 48px;
-}
-
-.timeline-dot {
-  position: absolute;
-  top: 24px;
-  width: 9px;
-  height: 9px;
-  border: 2px solid var(--background);
-  background: var(--lime);
-  box-shadow: 0 0 16px rgba(132, 240, 0, 0.66);
-}
-
-.timeline .left .timeline-dot {
-  right: -5px;
-}
-
-.timeline .right .timeline-dot {
-  left: -4px;
-}
-
-.timeline-card {
-  width: 360px;
-  padding: 23px 26px;
-  border: 1px solid var(--line);
-  background: linear-gradient(135deg, #050906, #030504);
-}
-
-.timeline-card time {
-  color: var(--lime);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 12px;
-}
-
-.timeline-card h3 {
-  margin: 13px 0 10px;
-  font-size: 16px;
-}
-
-.timeline-card p {
-  margin: 0;
-  color: #7f8980;
-  font-size: 13px;
-  line-height: 1.65;
-}
-
 .contact {
   border-top: 1px solid #0b100c;
   background:
@@ -1466,45 +1382,6 @@ footer {
 
   .news-heading {
     align-items: center;
-  }
-
-  .timeline {
-    margin-top: 38px;
-  }
-
-  .timeline-line {
-    left: 10px;
-  }
-
-  .timeline article,
-  .timeline article.right {
-    width: 100%;
-    min-height: 148px;
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 42px;
-    text-align: left;
-  }
-
-  .timeline article.left {
-    justify-content: flex-start;
-    padding-right: 0;
-    padding-left: 42px;
-    text-align: left;
-  }
-
-  .timeline .left .timeline-dot,
-  .timeline .right .timeline-dot {
-    right: auto;
-    left: 6px;
-  }
-
-  .timeline-card {
-    width: 100%;
-  }
-
-  .story {
-    min-height: auto;
   }
 
   .contact-points p {
