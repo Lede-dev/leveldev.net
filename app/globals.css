@@ -897,8 +897,10 @@ a {
   display: grid;
   grid-auto-columns: 100%;
   grid-auto-flow: column;
+  margin: -12px 0 -8px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  padding: 12px 0 8px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -1316,9 +1318,10 @@ a {
   grid-auto-columns: calc((100% - 28px) / 3);
   grid-auto-flow: column;
   gap: 14px;
+  margin-top: -7px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
-  padding: 3px 0 12px;
+  padding: 10px 0 12px;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
