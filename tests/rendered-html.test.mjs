@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -191,4 +192,50 @@ test("ships finished metadata without starter preview markers", async () => {
     html,
     /content="https:\/\/leveldev\.net\/og\.png"/i,
   );
+  assert.match(
+    html,
+    /<link rel="canonical" href="https:\/\/leveldev\.net\/"\/?>/i,
+  );
+  assert.match(html, /name="robots" content="index, follow"/i);
+  assert.match(html, /type="application\/ld\+json"/i);
+  assert.match(html, /https:\/\/schema\.org/);
+  assert.match(html, /"@type":"Organization"/);
+  assert.match(html, /"@type":"WebSite"/);
+  assert.match(html, /"hasOfferCatalog"/);
+});
+
+test("publishes discovery files for search and AI retrieval crawlers", async () => {
+  const publicUrl = new URL("../public/", import.meta.url);
+  const [robots, sitemap, llms] = await Promise.all([
+    readFile(new URL("robots.txt", publicUrl), "utf8"),
+    readFile(new URL("sitemap.xml", publicUrl), "utf8"),
+    readFile(new URL("llms.txt", publicUrl), "utf8"),
+  ]);
+
+  assert.match(robots, /Content-Signal: search=yes, ai-input=yes, ai-train=no/);
+  assert.match(
+    robots,
+    /User-agent: OAI-SearchBot[\s\S]*?ai-input=yes[\s\S]*?Allow: \//,
+  );
+  assert.match(
+    robots,
+    /User-agent: Claude-SearchBot[\s\S]*?ai-input=yes[\s\S]*?Allow: \//,
+  );
+  assert.match(
+    robots,
+    /User-agent: PerplexityBot[\s\S]*?ai-input=yes[\s\S]*?Allow: \//,
+  );
+  assert.match(robots, /User-agent: GPTBot\s+Disallow: \//);
+  assert.match(robots, /Sitemap: https:\/\/leveldev\.net\/sitemap\.xml/);
+
+  assert.match(sitemap, /<loc>https:\/\/leveldev\.net\/<\/loc>/);
+  assert.match(
+    sitemap,
+    /<loc>https:\/\/leveldev\.net\/news\/project-consulting<\/loc>/,
+  );
+
+  assert.match(llms, /# LevelDev Inc\./);
+  assert.match(llms, /## 주요 서비스/);
+  assert.match(llms, /## 주요 프로젝트/);
+  assert.match(llms, /AI 검색 색인/);
 });

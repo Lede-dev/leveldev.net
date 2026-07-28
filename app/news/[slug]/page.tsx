@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { findNotice, notices } from "../../data/notices";
 
@@ -12,7 +13,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const notice = findNotice(slug);
 
@@ -21,6 +22,25 @@ export async function generateMetadata({
   return {
     title: `${notice.title} | LevelDev Inc.`,
     description: notice.description,
+    alternates: {
+      canonical: `/news/${notice.slug}`,
+    },
+    openGraph: {
+      title: `${notice.title} | LevelDev Inc.`,
+      description: notice.description,
+      type: "article",
+      url: `/news/${notice.slug}`,
+      siteName: "LevelDev Inc.",
+      locale: "ko_KR",
+      images: [
+        {
+          url: "/og.png",
+          width: 1734,
+          height: 907,
+          alt: `${notice.title} | LevelDev Inc.`,
+        },
+      ],
+    },
   };
 }
 

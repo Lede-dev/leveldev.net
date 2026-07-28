@@ -1,0 +1,51 @@
+# LevelDev Inc.
+
+> LevelDev Inc.는 기획, 제작, 기술 개발과 운영을 연결해 모든 플레이어를 위한 콘텐츠와 서비스를 만드는 콘텐츠 개발사입니다.
+
+- 공식 명칭: LevelDev Inc.
+- 한국어 명칭: 레벨데브
+- 슬로건: We Build Play for Everyone.
+- 공식 웹사이트: https://leveldev.net/
+- 문의: contact@leveldev.net
+- 기본 언어: 한국어
+
+## 주요 서비스
+
+1. 월드·맵 및 아트 리소스 제작
+   - 게임과 콘텐츠에 필요한 공간, 월드, 맵, 건축물, 이벤트 공간과 2D·3D 시각 리소스를 제작합니다.
+   - 마인크래프트 BE·JE와 여러 버전, 다양한 규모의 지형·레벨 디자인·인테리어 제작을 지원합니다.
+
+2. 게임플레이 및 시스템 개발
+   - 기획된 규칙과 상호작용을 실제로 플레이 가능한 기능으로 구현합니다.
+   - 마인크래프트 플러그인·모드·서버 콘텐츠 시스템과 Unreal·Godot 기반 2D·3D 게임 개발을 지원합니다.
+
+3. 크리에이터 콘텐츠 제작
+   - 크리에이터와 브랜드의 아이디어를 방송, 영상, 참여형 이벤트와 콘텐츠 서버에 적합한 경험으로 기획하고 제작합니다.
+   - 치지직, SOOP, 씨미를 포함한 스트리밍·영상 플랫폼용 콘텐츠를 지원합니다.
+
+4. 기술 개발 및 운영 지원
+   - 서버 최적화, 마인크래프트 런처, 자동화, 콘텐츠 제작 파이프라인, 프로젝트 관리와 운영에 필요한 기술 구조를 제안하고 개발합니다.
+
+## 주요 프로젝트
+
+- 한강서버 — 치지직 스트리머 콘텐츠 서버, 한사기, 2026년 4월
+- 블루점프 원블럭 — SOOP 블루점프 멤버 전용 콘텐츠 서버, 대월향 & 블루점프, 2026년 5월
+- 이리와 운동회 — 치지직 스트리머 운동회 콘텐츠 서버, 유이리, 2025년 9월
+- 모징어 게임 — 대규모 스트리머 및 유튜버 콘텐츠 서버, 로빈, 2025년 7월
+
+## 공식 채널
+
+- YouTube: https://www.youtube.com/channel/UCYRR-uYiex4Cx7IIIwFlEpg
+- GitHub: https://github.com/leveldevinc
+- Discord: https://discord.gg/49HEWTA
+- Email: mailto:contact@leveldev.net
+
+## 사이트 문서
+
+- 홈페이지: https://leveldev.net/
+- 프로젝트 상담 안내: https://leveldev.net/news/project-consulting
+- 제작 파트너 모집: https://leveldev.net/news/creative-partners
+- 크리에이터·브랜드 파트너십: https://leveldev.net/news/creator-brand-partnership
+- 사이트맵: https://leveldev.net/sitemap.xml
+
+AI 검색 색인, 검색 결과의 짧은 인용과 링크, 사용자가 요청한 실시간 답변을 위한 조회를 허용합니다. 모델 학습 또는 미세 조정 목적의 수집은 허용하지 않습니다.
