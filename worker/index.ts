@@ -19,6 +19,29 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
+const DISCOVERY_CONTENT_TYPES: Record<string, string> = {
+  "/llms.txt": "text/plain; charset=utf-8",
+  "/robots.txt": "text/plain; charset=utf-8",
+  "/sitemap.xml": "application/xml; charset=utf-8",
+};
+
+function withDiscoveryContentType(pathname: string, response: Response): Response {
+  const contentType = DISCOVERY_CONTENT_TYPES[pathname];
+
+  if (!contentType || !response.ok) {
+    return response;
+  }
+
+  const headers = new Headers(response.headers);
+  headers.set("Content-Type", contentType);
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -40,7 +63,8 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+    return withDiscoveryContentType(url.pathname, response);
   },
 };
 
