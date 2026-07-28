@@ -50,3 +50,34 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Allow AI search and user-requested crawlers
+        shell: bash
+        run: |
+          response="$(
+            curl --silent --show-error \
+              --request PUT \
+              --url "https://api.cloudflare.com/client/v4/zones/d9eb0f8192c6b69f0d813459c80efa8c/bot_management" \
+              --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              --header "Content-Type: application/json" \
+              --data '{"ai_bots_protection":"disabled","is_robots_txt_managed":false}'
+          )"
+
+          echo "${response}" | node --input-type=module -e '
+            let input = "";
+            process.stdin.on("data", (chunk) => (input += chunk));
+            process.stdin.on("end", () => {
+              const payload = JSON.parse(input);
+              if (
+                payload.success !== true ||
+                payload.result?.ai_bots_protection !== "disabled" ||
+                payload.result?.is_robots_txt_managed !== false
+              ) {
+                console.error(JSON.stringify(payload.errors ?? payload, null, 2));
+                process.exit(1);
+              }
+              console.log("Cloudflare AI crawler access policy is configured.");
+            });
+          '
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
