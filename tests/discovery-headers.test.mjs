@@ -1,5 +1,26 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
+
+test("defines UTF-8 headers for Cloudflare static discovery assets", async () => {
+  const headers = await readFile(
+    new URL("../public/_headers", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(
+    headers,
+    /\/llms\.txt\s+Content-Type: text\/plain; charset=utf-8/i,
+  );
+  assert.match(
+    headers,
+    /\/robots\.txt\s+Content-Type: text\/plain; charset=utf-8/i,
+  );
+  assert.match(
+    headers,
+    /\/sitemap\.xml\s+Content-Type: application\/xml; charset=utf-8/i,
+  );
+});
 
 test("serves crawler discovery files with explicit UTF-8 content types", async () => {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
