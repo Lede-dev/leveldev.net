@@ -136,12 +136,11 @@ const projects = [
   {
     title: "곡좀빌",
     client: "휘용",
-    clientLabel: "주최",
     date: "2026.10",
     platform: "CHZZK",
     description: "마인크래프트 야생 건축 서버 ‘곡괭이 좀 빌리지’ 시즌 1입니다.",
     image: "/projects/gokjombil.png",
-    imageFit: "contain",
+    imageFit: "cover",
     href: gokjombilVideoUrl,
   },
   {

@@ -98,7 +98,8 @@ test("server-renders the LevelDev Inc. content development company landing page"
     /href="https:\/\/www\.youtube\.com\/watch\?v=moyIjdVWm3M"/,
   );
   assert.match(gokjombilCard, /src="\/projects\/gokjombil\.png"/);
-  assert.match(gokjombilCard, /주최 · 휘용/);
+  assert.match(gokjombilCard, /class="project-image"/);
+  assert.match(gokjombilCard, /CLIENT · 휘용/);
   assert.match(html, /대월향 &amp; 블루점프/);
   assert.match(html, /\/projects\/hangang-server\.png/);
   assert.match(html, /\/projects\/bluejump-oneblock\.png/);
