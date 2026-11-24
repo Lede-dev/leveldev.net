@@ -130,7 +130,20 @@ const services = [
   },
 ];
 
+const gokjombilVideoUrl = "https://www.youtube.com/watch?v=moyIjdVWm3M";
+
 const projects = [
+  {
+    title: "곡좀빌",
+    client: "휘용",
+    clientLabel: "주최",
+    date: "2026.10",
+    platform: "CHZZK",
+    description: "마인크래프트 야생 건축 서버 ‘곡괭이 좀 빌리지’ 시즌 1입니다.",
+    image: "/projects/gokjombil.png",
+    imageFit: "contain",
+    href: gokjombilVideoUrl,
+  },
   {
     title: "한강서버",
     client: "한사기",
@@ -173,6 +186,14 @@ const projects = [
 ];
 
 const videos = [
+  {
+    title: "드디어 돌아온 야생 건축 서버 곡좀빌 :: 곡괭이 좀 빌리지 시즌 1",
+    date: "2026.11.10",
+    meta: "26.3만 조회 · 2026.11.10",
+    author: "휘용의 취미생활",
+    href: gokjombilVideoUrl,
+    image: "/videos/gokjombil.jpg",
+  },
   {
     title: "【한강 서버】벽 뒤에 자꾸 뭐가 보임",
     date: "2026.05.24",

@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 type Project = {
   title: string;
   client: string;
+  clientLabel?: string;
   date: string;
   platform: string;
   description: string;
@@ -41,7 +42,9 @@ function ProjectCard({ project }: { project: Project }) {
           <h3>{project.title}</h3>
           <p>{project.description}</p>
           <div className="project-footer">
-            <span className="project-link">CLIENT · {project.client}</span>
+            <span className="project-link">
+              {`${project.clientLabel ?? "CLIENT"} · ${project.client}`}
+            </span>
             {project.href ? (
               <span className="project-action">프로젝트 보기 ↗</span>
             ) : null}

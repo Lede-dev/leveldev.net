@@ -89,6 +89,16 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /이리와 운동회/);
   assert.match(html, /모징어 게임/);
   assert.match(html, /블루점프 원블럭/);
+  const gokjombilCard = html.match(
+    /<a [^>]*aria-label="곡좀빌 프로젝트 관련 링크 열기"[^>]*>[\s\S]*?<\/a>/,
+  )?.[0];
+  assert.ok(gokjombilCard, "곡좀빌 should render as a linked project card");
+  assert.match(
+    gokjombilCard,
+    /href="https:\/\/www\.youtube\.com\/watch\?v=moyIjdVWm3M"/,
+  );
+  assert.match(gokjombilCard, /src="\/projects\/gokjombil\.png"/);
+  assert.match(gokjombilCard, /주최 · 휘용/);
   assert.match(html, /대월향 &amp; 블루점프/);
   assert.match(html, /\/projects\/hangang-server\.png/);
   assert.match(html, /\/projects\/bluejump-oneblock\.png/);
@@ -142,13 +152,13 @@ test("server-renders the LevelDev Inc. content development company landing page"
   assert.match(html, /data-autoplay="playing"/);
   assert.match(
     html,
-    /class="video-stage"[\s\S]*?\/videos\/hangang-server\.jpg[\s\S]*?김용찬[\s\S]*?2026\.05\.24/,
+    /class="video-stage"[\s\S]*?moyIjdVWm3M[\s\S]*?\/videos\/gokjombil\.jpg[\s\S]*?휘용의 취미생활[\s\S]*?2026\.11\.10/,
   );
   assert.match(html, /SELECTED VIDEO/);
   assert.match(html, /NEXT VIDEOS/);
   assert.match(html, /aria-label="이전 영상 목록 보기"/);
   assert.match(html, /aria-label="다음 영상 목록 보기"/);
-  assert.match(html, /data-count="2"/);
+  assert.match(html, /data-count="3"/);
   assert.match(html, /YouTube 채널에서 더 보기/);
   assert.doesNotMatch(html, /video-play/);
   assert.doesNotMatch(html, />SELECT</);
